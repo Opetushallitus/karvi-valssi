@@ -1,0 +1,25 @@
+.tekstit__container {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.tekstit__container > hr {
+    border-color: #4188b9;
+    opacity: .5;
+}
+
+.tekstit__container > div {
+    flex-grow: 1;
+}
+
+.kieli-title {
+    border-radius: 0%;
+    background-color: #4188b9;
+    color: white;
+    border: none;
+    padding: 0.375rem 2rem;
+    margin: 0.625rem 0 0 0;
+    width: fit-content;
+}

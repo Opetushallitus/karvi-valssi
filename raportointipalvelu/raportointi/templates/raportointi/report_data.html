@@ -1,0 +1,34 @@
+<h1>{{ html_data.title }}</h1>
+
+<p class="margin-bottom-0">{{ html_data.main_indicator_title }} {{ html_data.main_indicator }}</p>
+{% if html_data.secondary_indicators %}
+<p class="secondary_indicators">{{ html_data.secondary_indicators_title }} {{ html_data.secondary_indicators }}</p>
+{% endif %}
+
+<h3 class="koulutustoimija">{{ html_data.koulutustoimija }}</h3>
+
+<p>{{ html_data.data_collection_title }} {{ html_data.created_date }}</p>
+
+<p>{{ html_data.report_percentage_title }} {{ html_data.report_percentage_text }}</p>
+
+<p>{{ html_data.main_helptext }}</p>
+
+<a href="{{ html_data.link }}">{{ html_data.link_text }}</a>
+
+<p class="empty_p">&nbsp;</p>
+
+{% for question in html_data.questions %}
+    <h3 class="margin-bottom-0">{{ question.title }}</h3>
+
+    <p class="margin-bottom-0">{{ question.description }}</p>
+
+    {% if question.svg_base64 %}
+    <img class="svg-img"
+         src="data:image/svg+xml;base64,{{ question.svg_base64 }}"
+         alt="Chart" />
+    {% endif %}
+
+    <p>{{ question.helptext }}</p>
+
+    <p class="empty_p">&nbsp;</p>
+{% endfor %}

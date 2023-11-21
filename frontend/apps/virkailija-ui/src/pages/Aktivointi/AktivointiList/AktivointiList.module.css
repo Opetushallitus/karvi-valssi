@@ -1,0 +1,39 @@
+.multiselect-list, .multiselect-list-right {
+    border: solid 1px #2f487f;
+    height: 430px;
+    width: 300px;
+    overflow: auto;
+}
+
+.multiselect-list-right {
+    height: 430px;
+}
+
+.multiselect-button {
+    padding-bottom: 1rem;
+}
+
+button.multiselect-selectall-btn {
+    margin: 0;
+    width: 100%;
+}
+
+.multiselect-search {
+    padding-bottom: 1rem;
+}
+
+.multiselect-listitem-selected {
+    background-color: #EAF1F6;
+}
+
+.multiselect-listitem-selected:hover {
+    background-color: #AFC7DD;
+}
+
+.multiselect-listitem-icon {
+    justify-content: flex-end;
+}
+
+.multiselect-listitem-checkbox {
+    visibility: hidden;
+}

@@ -1,0 +1,17 @@
+/* TODO: remove importants and find the root cause (VAL-960) */
+.desc-expand-less-avatar {
+    margin: 2px !important;
+    border: 2px solid #4188B9 !important;
+    background-color: white !important;
+    color: #4188B9 !important;
+    height: 1.0rem !important;
+    width: 1.0rem !important;
+}
+
+.desc-expand-less {
+    font-size: 1.25rem !important;
+}
+
+.desc-expand-more {
+    color: #4188B9 !important;
+}

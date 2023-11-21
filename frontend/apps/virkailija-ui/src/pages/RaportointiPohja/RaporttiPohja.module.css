@@ -1,0 +1,20 @@
+.instructionsLink {
+    padding-top: 1.5rem;
+    color: #2f487f;
+    display: flex;
+}
+
+.instructionsLink a {
+    text-decoration: none;
+}
+
+.questionContainer {
+    padding-top: 1.5rem;
+}
+
+.FlexContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}

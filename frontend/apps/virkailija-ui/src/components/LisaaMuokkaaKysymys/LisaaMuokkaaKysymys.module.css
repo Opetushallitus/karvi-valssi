@@ -1,0 +1,25 @@
+.kysymys-type__container {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.kysymys-type__container > div {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.form-controls__container {
+    margin-top: 2rem;
+}
+
+.form-controls__container label{
+    margin-bottom: 2rem;
+}
+
+.form-controls__container button {
+    display: inline-block;
+}
+
+.error-message {
+    position: absolute;
+}

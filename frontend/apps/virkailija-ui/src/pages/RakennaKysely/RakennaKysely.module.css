@@ -1,0 +1,36 @@
+.topic-container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.topic-fields {
+    width: calc(100% -  100px);
+}
+
+.topic-controls {
+    width: 100px;
+}
+
+h2.topic {
+    display: inline-block;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.questionnaireType {
+    font-weight: 400;
+}
+
+.secondaryIndicatorsWrapper {
+    margin-top: 2rem;
+}
+.indicatorWrapper {
+    padding-left: 1.5rem;
+}
+.indicatorWrapper h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+}
+.indicatorWrapper p {
+    margin: 0 0 1rem 0;
+}

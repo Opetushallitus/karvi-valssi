@@ -1,0 +1,139 @@
+.raporti-page-wrapper {
+
+}
+
+.raporti-page-header-wrapper {
+
+}
+
+.raporti-page-content-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.raportti-options-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.raportti-options-wrapper > div {
+    padding-right: 2rem;
+}
+
+.raporti-navigation-wrapper {
+    border: 2px solid #2f487f;
+    padding: 2rem;
+    margin: 2rem 0;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.view-raportti-buttons {
+    display: flex;
+}
+
+ul.raport-navigation {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+ul.raport-navigation li {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.raporti-wrapper {
+    border: 2px solid #2f487f;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.raporti-ddl-wrapper {
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.raporti-wrapper-no-borders {
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.raporti-wrapper h3,
+.raporti-wrapper-no-borders h3 {
+    margin-bottom: 2rem;
+}
+
+.secondary-heading-wrapper h3 {
+    margin: 0.5rem 0;
+}
+
+.raporti-page-heading {
+    font-size: 2rem;
+}
+.main-heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+.main-heading-wrapper button {
+    margin: 0;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.grid-wrapper h3 {
+    font-size: 1rem;
+    margin: 0.7rem 0;
+    color: white;
+    background: #2f487f;
+}
+.grid-wrapper p {
+    color: #2f487f;
+    margin: 0;
+}
+.grid-wrapper a,
+.grid-wrapper span {
+    margin: 0;
+}
+.grid-a {
+    grid-column: 1;
+    padding: 1rem;
+}
+.grid-b {
+    grid-column: 2;
+    padding: 1rem;
+}
+.grid-a-b {
+    grid-column: 1 / 3;
+    padding: 1rem 50% 1rem 1rem;
+}
+.grid-c {
+    grid-column: 3;
+    padding: 1rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.grid-c :first-child {
+    margin: auto 0;
+}
+.no-link {
+    color: #2f487f;
+    margin-right: 2rem;
+}
+
+.linkToSummaryView {
+    font-weight: bold;
+}
+.dropdown-wrapper {
+    min-width: 20rem;
+    max-width: 40rem;
+}
+.result-textfield-wrapper,
+.summary-textfield-wrapper {
+    margin: 0.8rem 0 0.8rem 0;
+}

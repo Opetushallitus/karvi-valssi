@@ -1,0 +1,13 @@
+button.button-without-styles {
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+}
+button.button-without-styles:hover,
+button.button-without-styles:active {
+    background: none;
+    color: inherit;
+}

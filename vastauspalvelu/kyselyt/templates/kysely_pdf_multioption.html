@@ -1,0 +1,18 @@
+<div class="{{ monivalinta_type }}group">
+
+    {% for choice in choices %}
+    <div class="monivalinta-input-div-{{ monivalinta_type }}">
+        <input id="{{ monivalinta_type }}-{{ kysymysid }}-{{ choice.index }}" type="{{ monivalinta_type }}" {{ choice.checked }}>
+        <label for="{{ monivalinta_type }}-{{ kysymysid }}-{{ choice.index }}">{{ choice.title }}</label>
+    </div>
+
+    {% if choice.description is not None %}
+    <span class="monivalinta-description-{{ monivalinta_type }}">
+        <span class="info-dot"></span>
+        {{ choice.description }}
+    </span>
+    {% endif %}
+
+    {% endfor %}
+
+</div>

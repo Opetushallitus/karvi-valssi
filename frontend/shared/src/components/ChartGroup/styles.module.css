@@ -1,0 +1,147 @@
+.heading-and-scale {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+    position: relative;
+}
+.heading-and-scale h3 {
+    margin-bottom: 0;
+}
+.avarage {
+    bottom: 0;
+    right: -1.5rem;
+    position: absolute;
+}
+.heading-and-chart {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    z-index: 2;
+    position: relative;
+}
+
+.left-wrapper {
+    width: 30%;
+}
+.left-wrapper h4 {
+    font-weight: normal;
+    margin: 0.5rem 0;
+}
+.chart {
+    width: 65%;
+    margin-left: 5%;
+}
+.scale-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 65%;
+    margin-bottom: 1.3rem;
+    position: relative;
+    margin-left: 35%;
+}
+.scale-list li {
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 0 2.5rem 0 0;
+}
+.scale-list li p {
+    margin: 0;
+}
+.scale-list li:last-child {
+    margin-right: 0;
+}
+.scale-list span {
+    position: relative;
+    bottom: 0.15rem;
+    margin-right: 0.5rem;
+}
+.scale-list span::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    content: '';
+}
+.percent-list {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    width: 65%;
+    margin: 0 0 0 35%;
+    height: 1rem;
+}
+.percent-list li {
+    position: absolute;
+    padding-top: 0.3rem;
+}
+.percent-list-item-0 {
+    left: 0;
+}
+.percent-list-item-1 {
+    left: 18.5%;
+}
+.percent-list-item-2 {
+    left: 38.5%;
+}
+.percent-list-item-3 {
+    left: 58.5%;
+}
+.percent-list-item-4 {
+    left: 78.5%;
+}
+.percent-list-item-5 {
+    right: 0;
+}
+.chart-wrapper {
+    position: relative;
+}
+.percent-markers {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: stretch;
+    z-index: 1;
+    width: 65%;
+    margin-left: 35%;
+}
+.percent-markers span {
+    position: relative;
+    display: block;
+    width: 1px;
+    background: black;
+}
+.percent-info-text {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 35%;
+    padding-top: 1.1rem;
+}
+
+.reportbase-question-text {
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .scale-list {
+        width: 100%;
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 775px) {
+    .scale-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .scale-list li {
+        margin-bottom: 1rem;
+    }
+}

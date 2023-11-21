@@ -1,0 +1,17 @@
+{% if field_type == "textfield" %}
+
+    <div class="string-box">{{ vastaus }}</div>
+
+{% elif field_type == "multiline" %}
+
+    <div class="multiline-box">
+        {% for vastaus_line in vastaus_lines %}
+            <p>{{ vastaus_line }}</p>
+        {% endfor %}
+    </div>
+
+{% elif field_type == "numeric" %}
+
+    <div class="numeric-box">{{ vastaus }}</div>
+
+{% endif %}

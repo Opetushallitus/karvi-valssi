@@ -1,0 +1,47 @@
+.indicatorsList {
+    list-style-type: none;
+    padding: 0;
+}
+.addWrapper {
+    display: flex;
+}
+.addWrapper button:focus {
+    background-color: #2f487f;
+    color: white;
+}
+button.showIndicatorsButton {
+    background: none;
+    border: 0;
+    color: #2f487f;
+    padding: 0;
+    text-transform: none;
+    font-weight: bold;
+}
+button.showIndicatorsButton:hover {
+    background: none;
+    border: 0;
+    color: #2f487f;
+    padding: 0;
+    text-decoration: underline;
+}
+h2.secondHeading {
+    font-size: 1.1rem;
+    margin-top: 0rem;
+    padding-top: 0.5rem;
+}
+.indicatorWrapper {
+    padding-left: 1.5rem;
+}
+.indicatorWrapper h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+}
+.indicatorWrapper p {
+    margin: 0 0 1rem 0;
+}
+.indicatorWrapper svg {
+    color: gray;
+}
+.indicatorWrapper button {
+    padding: 0.1rem !important;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        p { margin: 5px 0 5px 0; }
+    </style>
+    </head>
+
+    <body>
+    {% if message %}
+        {% for line in message %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    {% endif %}
+
+    <p>&nbsp;</p>
+    {% for line in lines %}
+    <p>{{ line }}&nbsp;</p>
+    {% endfor %}
+
+    {% if kysely_link %}
+    <p>
+        <a href="{{ kysely_link }}" target="_blank" rel="noreferrer">{{ kysely_link }}</a>
+    </p>
+    {% endif %}
+
+    {% if tietosuojaseloste_link %}
+    <p>&nbsp;</p>
+    <p>{{ tietosuojaseloste_text }}</p>
+    <p>
+        <a href="{{ tietosuojaseloste_link }}" target="_blank" rel="noreferrer">{{ tietosuojaseloste_link }}</a>
+    </p>
+    {% endif %}
+    </body>
+</html>

@@ -1,0 +1,564 @@
+{:kieli {:sv "Swedish", :fi "Finnish" :en "English"}
+ :etusivu {:logo-url "img/ARVO_vaaka_en.png"
+           :otsikko "Welcome to Arvo - Education Management Information Service!"
+           :alaotsikko "Arvo reponds to study administration's demands to collect feedback and follow-up data in the field of education. In Arvo's administrative user interface you can modify surveys and view reports. Using the service requires a specific user access role."
+           :tiedotteet "News"
+           :nayta-vanhemmat "Show older"
+           :luo-uusi-tiedote "Create a news item"
+           :linkit {:kayttoohjeet {:teksti "Look at user instructions (in Finnish)" :siirry "Go to instructions" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=14123634"}
+                    :tietosuoja {:teksti "Info on handling personal data (in Finnish)" :siirry "Go to Arvo wiki" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=72518054"}
+                    :palaute {:teksti "Give feedback" :siirry "Go to survey" :url "https://arvovastaus.csc.fi/v/WPCXAW"}
+                    :kayttooikeudet {:teksti "Apply or extend user access" :siirry "Go to instructions" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=49851996"}}}
+
+ :vastaajatunnus {:taustatiedot {:tutkintonimike "Qualification title"
+                                 :osaamisala "Competence area"
+                                 :kieli "Language of degree"
+                                 :oppilaitos "Educational institution"
+                                 :toimipiste "Operational unit"
+                                 :hankintakoulutuksen_toteuttaja "Provider of procured training"
+                                 :oppisopimuksen_perusta "The basis of apprenceship agreement"
+                                 :tehtava_yrityksessa "Position in the company "
+                                 :tyonantaja "Employer"
+                                 :sopimustyyppi "Way to achieve competence"
+                                 :tutkinnon_taso "Level of degree"
+                                 :koulutusmuoto "Form of education"
+                                 :rahoitusryhma "Financing group"
+                                 :kyselykerta "Questionnaire instance"}
+                  :tila {:lahetetty "Sent successfully"
+                         :lahetys_epaonnistunut "Failed to send"
+                         :odottaa_niputusta "Waiting for bundling"
+                         :niputettu "Bundled successfully"
+                         :odottaa_lahetysta "Waiting to be sent"
+                         :ei_niputeta "Not bundled"
+                         :ei_laheteta "Not sent"
+                         :success "Sent successfully"}}
+
+ :raportit {:otsikko "Reports"
+            :alaotsikko "Arvo's reports are used to review response data, especially during the data collection period. \n\n In the Arvo service user interface, the answers are reported on the survey report that opens in the browser only if there are at least five respondents in the target group. Exceptions are the working life feedback surveys for vocational education, which can be viewed even when there are less than five respondents. All responses are printed on the primary user's CSV report, even if there are less than five respondents in the target group. \n\n The nationwide comparison data in the degree-specific reports is the average of all degrees in the same field of study (opintoala) and in the field-specific reports the average of all degrees in the same field of education (koulutusala). The comparison data for the other questions is the average of all the answers given to the same question. Comparison data will not be included in reports if only respondents with no degree information are selected. \n\n [Arvo's user instructions (in Finnish)](https://wiki.eduuni.fi/pages/viewpage.action?pageId=14123634) \n\n [Vipunen - Education Statistics Finland](https://vipunen.fi/en-gb/)"
+            :valittu-kysely "Selected questionnaire"
+            :valitse-kysely "Choose questionnaire"
+            :hae-kyselyita "Search for questionnaires"
+            :data-lataus {:vastausdata "Report by respondent"
+                          :data-vastauksittain "Report by response"
+                          :kohteet "All credentials"
+                          :vastanneet "Respondents"
+                          :lataa "Download CSV file"
+                          :valitse "Select CSV file"}
+            :muoto {:graafit-ja-tekstit "Graphs and text"
+                    :vain-tekstit "Text only"
+                    :vain-graafit "Graphs only"}
+            :lataus "Loading"
+            :lataus_virhe "Error occurred while loading"
+            :lataus_ei_tuloksia "No results"
+            :raportin-vertailukausi "Nationwide comparison data from period"
+            :raportin-aikajakso "Time period"
+            :valitse-suodattimet "Choose filters"
+            :suodattimet {:tutkinnot_ja_alat "Degree and field of education"
+                          :hae-koulutusalaa "Search for a field of education"
+                          :hae-tutkintoa "Search for a degree"
+                          :ei-valintaa "No selection"}
+            :error {:title "Unable to generate report"
+                    :ei-riittavasti-vastaajia "There are too few results with the filters  you have selected."
+                    :yrita-uudelleen "Please change filters and try again."}
+            :vertailukausi {:kuluva-rahoituskausi "Current data collection period"
+                            :edellinen-rahoituskausi "Previous data collection period"
+                            :edellinen-kalenterivuosi "Previous calendar year"
+                            :edellinen-kevat "Previous spring term"
+                            :edellinen-syksy "Previous autumn term"
+                            :ei-vertailudataa "No comparison data"}
+            :raportin-muoto {:otsikko "Mitä raportilla näytetään?"
+                             :kansalliset "Näytetään vain valtakunnalliset kysymykset"
+                             :rahoitusmalli "Näytetään vain rahoitusmalliin perustuvat kysymykset"
+                             :organisaatio "Näytetään vain organisaation omat lisäkysymykset"
+                             :raportin_muoto_teksti "Näytetään vain tekstivastaukset (vain pääkäyttäjille)"}
+            :muodosta-raportti "Create report"
+            :raportti {:otsikko "Report"
+                       :raportin-kieli "Report language"
+                       :siirry-kysymysryhmaan "Go to question group"
+                       :nayta-raportissa "Show on report"
+                       :raportin_luontipaiva "Report created"
+                       :koulutuksen_jarjestaja "Education provider"
+                       :kohderyhman_koko "Size of target group"
+                       :kokonaismaara "Total respondents"
+                       :keskiarvo "Average"
+                       :keskihajonta "Standard deviation"
+                       :vastpros "Rsp %"
+                       :vertailudata "Comparison data"
+                       :vastausprosentti "Response rate"
+                       :vastaukset "Answers"
+                       :kaytetyt-suodattimet "Chosen filters"
+                       :muoto {:graafit-ja-tekstit "Graphs and text"
+                               :vain-graafit "Graphs only"
+                               :vain-tekstit "Text only"}
+                       :osallistuminen-tutkinnoittain "Participation by degree"
+                       :ei_tutkintotietoa "No degree information"
+                       :tutkinto "Degree"
+                       :vastaajien_maara "Antal respondenter"
+                       :kohteita "Targets"
+                       :osallistuminen-rahoitusryhmittain "Participation by financing group"
+                       :ei_rahoitusryhmatietoa "No financing group information"
+                       :rahoitusryhma "Financing group"
+                       :rahoitusryhma-tunnus-01 "Financing of compulsory education"
+                       :rahoitusryhma-tunnus-02 "Financing of continuous learning"
+                       :vapaateksti-vastaus "Open text answers"}}
+
+ :navigaatio {:raportit "reports"
+              :kysymysryhmat "question groups"
+              :etusivu "home"
+              :kyselypohjat "questionnaire templates"
+              :kyselyt "questionnaires"}
+
+ :roolit {:rooli {:KYSELYKERTAKAYTTAJA "User PLUS"
+                  :VASTUUKAYTTAJA "Main user"
+                  :OPH-KATSELIJA "OKM Katselija"
+                  :KAYTTAJA "User"
+                  :YLLAPITAJA "CSC admin"
+                  :KATSELIJA "Viewer"}
+          :valitse_kaytettava_rooli "Change role"
+          :vaihda_roolia "Change role"
+          :valitse_rooli "Choose role"}
+
+ :tiedote {:otsikko-uusi "Create a news item"
+           :otsikko-muokkaa "Modify the news item"
+           :nimi ""
+           :kuvaus ""}
+
+ :kysely {:tila {:kaikki "All"
+                 :avoimet "Open"
+                 :suljetut "Closed"}
+          :kategoria {:kaynnissa "Current"
+                      :juuri-paattyneet "Just ended"
+                      :arkistoitu "Archive"
+                      :tulevat "Upcoming"}}
+ :yleiset {:kysely "Questionnaire"
+           :nimi "Name"
+           :kuvaus "Description"
+           :suomeksi "suomeksi"
+           :ruotsiksi "På svenska"
+           :englanniksi "In English"
+           :alkupvm "Start date"
+           :loppupvm "End date"
+           :ladataan "Loading"
+           :tallenna "Save"
+           :peruuta "Cancel"
+           :virhe_kayttoikeudet_eivat_riita "Please check your user permissions"
+           :viikon-paivat-lyhyt ["Mo" "Tu" "We" "Th" "Fr" "Sa" "Su"]
+           :kuukaudet ["January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December"]
+           :takaisin "Back"}
+
+ :footer {:kayttoohjeet "User instructions"
+          :kayttoohjeet-url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=272196505"
+          :saavutettavuusseloste "Accessibility statement"
+          :saavutettavuusseloste-url "https://wiki.eduuni.fi/display/CscArvo/Arvo+Accessibility+Statement"}
+ :kysymys {:kylla_ei_valinta {:eos "I can't say"
+                              :ei "No"
+                              :kylla "Yes"}}
+ :csv {:vastaajatunnus "Answer identifier" :vastausaika "Response time"
+       :tunnus "Answer identifier"
+       :luotuaika "TimeCreated"
+       :url "Credential"
+       :kysymysryhma "Question group"
+       :kysymys "Question"
+       :vastaus "Answer"
+       :voimassa_alkupvm "Validity start date"
+       :voimassa_loppupvm "Validity end date"
+       :tutkintotunnus "Degree"
+       :vastausten_lkm "Respondent count" :vastaajien_lkm "Respondent count" :kohteiden_lkm "Response count"
+       :tutkinto_selite "Name of degree"
+       :tutkinnon_osa_selite "Name of the qualification unit"
+       :rahoitusryhma_selite "Name of financing group"
+       :hankintakoulutuksen_toteuttaja_selite "Name of provider (procured training)"
+       :toimipiste_selite "Name of operational unit"
+       :koulutustoimija_selite "Name of education provider"
+       :koulutusalakoodi_selite "Field of education"
+       :asuinkunta_koodi_selite "Municipality of residence"
+       :opiskelupaikkakunta_koodi_selite "Municipality of education"
+       :oppilaitos_nimi "Educational institution"
+       :koulutusmuoto "Form of education"
+       :nimi " Questionnaire instance"
+       :nippu "Bundle-id"
+       :tila "Status"
+       :odottaa_niputusta "Waiting for bundling"
+       :niputettu "Bundled successfully"
+       :ei_niputeta "Not bundled"
+       :osaamisala "Competence area"
+       :tutkintonimikkeet "Qualification title"
+       :tutkinnot "Degrees"
+       :tutkinnon_osat "Qualification units"
+       :tyopaikkajaksojen_kesto "Duration of work-based learning periods (sum of days)"
+       :tyopaikkajaksojen_lkm "Workplace learning periods"
+       :tyopaikkakysely_tunnus "Credential (Survey to workplaces)"}}
+
+ ;
+ ;:enum {:kieli-arvo {:sv "Swedish" :fi "Finnish" :en "English"}
+ ;       :tutkintotyyppi-arvo {:ammattitutkinto "Further vocational qualification"
+ ;                             :perustutkinto "Vocational upper secondary qualification"
+ ;                             :erikoisammattitutkinto "Specialist vocational qualification"}}
+ ;:kyselypohja {:tallennus_onnistui "Questionnaire template saved",
+ ;              :kyselypohja "Questionnaire template",
+ ;              :valinta_ohjeistus "Choose a question group to add",
+ ;              :kuvaus "Questionnaire template description",
+ ;              :luo_uusi "Create a new questionnaire template",
+ ;              :julkaisu_epaonnistui "Publishing questionnaire template failed",
+ ;              :palautus_julkaistuksi_epaonnistui "Reverting questionnaire template to published failed",
+ ;              :poista_teksti "Questionnaire template will be permanently deleted and cannot be restored.",
+ ;              :sulkeminen_epaonnistui "Closing questionnaire template failed",
+ ;              :julkaise_teksti "After publishing questionnaire template can be used on questionnaires.",
+ ;              :tallennus_epaonnistui "Saving questionnaire template failed",
+ ;              :palauta_julkaistuksi "Revert questionnaire template to published",
+ ;              :palautus_luonnokseksi_onnistui "Questionnaire template has been reverted to draft",
+ ;              :etsi "Search for questionnaire templates",
+ ;              :poistaminen_onnistui "Questionnaire template has been deleted",
+ ;              :poistaminen_epaonnistui "Deleting questionnaire template failed",
+ ;              :palauta_luonnokseksi_teksti "Draft questionnaire template cannot be used on questionnaires.",
+ ;              :nimi "Questionnaire template name",
+ ;              :rakenne "Structure",
+ ;              :valinta "Choose a question group",
+ ;              :julkaise "Publish questionnaire template",
+ ;              :breadcrumb_kyselypohja "Questionnaire templates",
+ ;              :palauta_julkaistuksi_teksti "Published questionnaire template can be used on questionnaires.",
+ ;              :sulje_teksti "Closed questionnaire template cannot be added to questionnaires.",
+ ;              :breadcrumb_uusi_kyselypohja "New questionnaire template",
+ ;              :sulje "Close questionnaire template",
+ ;              :suljettu "Questionnaire template is closed",
+ ;              :palauta_luonnokseksi "Revert questionnaire template to draft",
+ ;              :julkaistu "Questionnaire template has already been published",
+ ;              :poista "Delete questionnaire template",
+ ;              :muokkaa "Edit questionnaire template",
+ ;              :breadcrumb_muokkaa_kyselypohjaa "Edit questionnaire template",
+ ;              :palautus_julkaistuksi_onnistui "Questionnaire template has been reverted to published",
+ ;              :palautus_luonnokseksi_epaonnistui "Reverting questionnaire template to draft failed"},
+ ;:vastaajatunnus {:tila {:lahetetty "Sent successfully",
+ ;                        :lahetys_epaonnistunut "Failed to send",
+ ;                        :odottaa_niputusta "Waiting for bundling",
+ ;                        :niputettu "Bundled successfully",
+ ;                        :odottaa_lahetysta "Waiting to be sent",
+ ;                        :ei_niputeta "Not bundled",
+ ;                        :ei_laheteta "Not sent",
+ ;                        :success "Sent successfully"}
+ ;                 :taustatiedot {:kieli "Language of degree"
+ ;                                :tutkinto "Degree"
+ ;                                :tutkintonimike "Qualification title"
+ ;                                :osaamisala "Competence area"
+ ;                                :oppilaitos "Educational institution"
+ ;                                :toimipiste "Operational unit"
+ ;                                :hankintakoulutuksen_toteuttaja "Provider of procured training"}
+ ;                 :lataa_csv "Export credentials"
+ ;
+ ;                 :tutkintomuoto "Tutkintomuoto",
+ ;                 :tyopaikka "Workplace",
+ ;                 :nippulinkki "Bundle link",
+ ;                 :tutkintomuoto_tutkinnon_osa "Tutkinnon osa",
+ ;                 :vastaajia "Number of respondents",
+ ;                 :luonti_laajennettu_tooltip "Tunnusten luominen, kun tunnus kuuluu laajennettuun oppisopimuskoulutuksen järjestämistehtävään",
+ ;                 :vastaa "Link to questionnaire",
+ ;                 :tallennus_onnistui "Credentials saved",
+ ;                 :siirtymaaika_loppuu "Transition period ends",
+ ;                 :menneisyydessa_selite "Credentials cannot be created for past dates.",
+ ;                 :lista "Credentials for respondents",
+ ;                 :ei_tutkintoja "(No degrees to choose from)",
+ ;                 :uusi_vastaajatunnus "Create credentials",
+ ;                 :laheta "Send credential",
+ ;                 :koulutuksen_jarjestava_oppilaitos "Institution providing education",
+ ;                 :nayta_omat "Show my credentials",
+ ;                 :poista_otsikko "Delete credential",
+ ;                 :poista_teksti "Credential will be permanently deleted and cannot be restored. If credential has been sent, the link will no longer work.",
+ ;                 :tallennus_epaonnistui "Saving credentials failed",
+ ;                 :tunnus "Credential",
+ ;                 :lisaa_vastaajatunnukset "Add credentials for respondents",
+ ;                 :luotuaika "Created",
+ ;                 :henkilokohtainen "Individual",
+ ;                 :vastausaika "Period for responding",
+ ;                 :nayta_lisaa_tutkintoja "Show more degrees",
+ ;                 :koulutusmuoto_monimuoto "Blended learning",
+ ;                 :luonti "Create credentials",
+ ;                 :sopimus "Agreement",
+ ;                 :valitse_koulutuksen_toteuttaja "Valitse ensin koulutuksen toteuttaja",
+ ;                 :koulutuksen_jarjestaja "Education provider",
+ ;                 :hankintakoulutuksen_toteuttaja "Provider of procured training",
+ ;                 :tutkinto "Degree",
+ ;                 :koulutuksen_jarjestava_toimipiste "Operational unit",
+ ;                 :koulutusmuoto "Form of learning",
+ ;                 :vastauksia "Responses",
+ ;                 :tutkintomuoto_koko_tutkinto "Koko tutkinto",
+ ;                 :vastausprosentti "Response rate",
+ ;                 :jarjestaja "Organization",
+ ;                 :koulutusmuoto_paivaopiskelu "Day time learning",
+ ;                 :luonti_laajennettu "Luo tunnuksia (laajennettu)",
+ ;                 :tutkinnon_osa "Qualification unit"},
+ ;,
+ ;:tiedote {:muokkaa "Edit announcement", :tallennus_onnistui "Announcement saved", :tiedote "Announcement"},
+ ;:haluatko-poistua "Are you sure you want to leave this page? Any unsaved changes will be lost!",
+ ;:kysymys {:naytettava_asteikko "Scale to show",
+ ;          :vastausvaihtoehdot "Answer options",
+ ;          :eos_vastaus_sallittu "\"I can't say\" -answer accepted",
+ ;          :arvosana6_valinnat "1 - 2 - 3 - 4 - 5 - 6",
+ ;          :vastaus_pakollinen "Answer required",
+ ;          :lisaa_vaihtoehto "Add option",
+ ;          :vapaateksti {:rajoite {:ei_rajoitetta "Everything", :numero "Numbers", :otsikko "Allowed characters"}},
+ ;          :nps_valinnat "0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10",
+ ;          :valintojen_maksimimaara "Max number of choices",
+ ;          :poistettava "Question can be excluded from questionnaire",
+ ;          :jatkokysymys "Continuation question",
+ ;          :vastaustapa "Answer type",
+ ;          :arvosana4_ja_eos {:4 "4", :1 "I can't say", :2 "2", :5 "5", :3 "3"},
+ ;          :kylla_ei_valinta {:eos "I can't say", :ei "No", :kylla "Yes"},
+ ;          :likert_asteikko_valinnat "Strongly disagree - Disagree - Neutral - Agree - Strongly agree",
+ ;          :asteikko_valinnat "No / not at all  - a little - to some extent - rather much - very much",
+ ;          :jatkokysymys_ei_vastaukselle "Continuation question for answer no",
+ ;          :vastauksen_maksimipituus "Max length of answer",
+ ;          :eos_tekstit "Lisää näytettävä teksti",
+ ;          :arvosana6_ja_eos {:3 "3", :0 "0", :1 "1", :6 "I can't say", :5 "5", :2 "2", :4 "4", :eos "I can't say"},
+ ;          :vapaa_tekstikentta "Open text",
+ ;          :arvosana6_ja_eos_valinnat "0 - 1 - 2 - 3 - 4 - 5 - I can't say",
+ ;          :nps {:10 "10", :0 "0", :4 "4", :7 "7", :1 "1", :8 "8", :9 "9", :2 "2", :5 "5", :3 "3", :6 "6"},
+ ;          :likert_asteikko {:3 "Neutral",
+ ;                            :1 "Strongly disagree",
+ ;                            :5 "Strongly agree",
+ ;                            :eos "I can't say",
+ ;                            :2 "Disagree",
+ ;                            :4 "Agree"},
+ ;          :arvosana4_ja_eos_valinnat "5 - 4 - 3 - 2 - I can't say",
+ ;          :arvosana6 {:6 "6", :1 "1", :3 "3", :5 "5", :4 "4", :2 "2"},
+ ;          :asteikko5_1 {:2 "2", :eos "I can't say", :4 "4", :3 "3", :5 "5", :1 "1"},
+ ;          :arvosana {:2 "2", :4 "4", :1 "1", :3 "3", :eos "I can't say", :5 "5"},
+ ;          :tyyppi {:vapaateksti "Open text",
+ ;                   :arvosana4_ja_eos "Grade (5-2 + I can't say)",
+ ;                   :kylla_ei_valinta "Yes/No",
+ ;                   :asteikko "Scale",
+ ;                   :arvosana6_ja_eos "Grade (1-6 + I can't say)",
+ ;                   :luku "Luku",
+ ;                   :valiotsikko "Väliotsikko",
+ ;                   :nps "Net Promoter Score",
+ ;                   :likert_asteikko "Likert-scale",
+ ;                   :arvosana6 "Grade (1-6)",
+ ;                   :asteikko5_1 "Scale (5-1)",
+ ;                   :arvosana "Grade",
+ ;                   :alasvetovalikko "Drop-down menu",
+ ;                   :monivalinta "Multiple choice",
+ ;                   :arvosana7 "Grade (1-7)"},
+ ;          :selitteet "Add description for question",
+ ;          :arvosana_valinnat "1 - 2 - 3 - 4 - 5",
+ ;          :jatkokysymys_kylla_vastaukselle "Continuation question for answer yes",
+ ;          :asteikko5_1_valinnat "5 - 4 - 3 - 2 - 1",
+ ;          :arvosana7_valinnat "1 - 2 - 3 - 4 - 5 - 6 - 7",
+ ;          :monivalinta {:eos "I can't say"},
+ ;          :arvosana7 {:6 "6", :1 "1", :7 "7", :4 "4", :2 "2", :5 "5", :3 "3"}},
+ ;:muokkaa_ohjetta "Edit instructions",
+ ;
+ ;:impersonointi {:lopeta_avustus "End assistance",
+ ;                :valitse_kayttaja "Choose a user",
+ ;                :vaihda_avustettavaksi_kayttajaksi "Change to assisted user",
+ ;                :valitse_avustettava_kayttaja "Choose a user to assist"},
+ ;:peruuta_muokkaus "Cancel changes",
+ ;:kyselykerta {:samanniminen_kyselykerta "There is a questionnaire instance with the same name",
+ ;              :lukitse_teksti "Responses are not accepted for locked questionnaire instances.",
+ ;              :tallennus_onnistui "Questionnaire instance saved",
+ ;              :perustiedot "Basic information",
+ ;              :kayttamattomia_vastaajatunnuksia "Unused respondent IDs",
+ ;              :tallennus_epaonnistui "Saving questionnaire instance failed",
+ ;              :poistaminen_onnistui "Questionnaire instance has been deleted.",
+ ;              :kyselykerran_nimi "Name of questionnaire instance",
+ ;              :poistaminen_epaonnistui "Deleting questionnaire instance failed.",
+ ;              :vastausaika "Period for responding",
+ ;              :muokkaa_vastaajatunnuste_maaraa "Edit the number of respondents",
+ ;              :poista "Delete questionnaire instance",
+ ;              :nayta "Show questionnaire instance",
+ ;              :uusi_kyselykerta "New questionnaire instance",
+ ;              :poista_ohjeistus "Questionnaire instance will be permanently deleted and cannot be restored.",
+ ;              :lukitseminen_onnistui "Questionnaire instance locked",
+ ;              :lukitse "Lock questionnaire instance"},
+ ;:raportti {:yhteensa "Total",
+ ;           :keskiarvo "Mean",
+ ;           :muodostus_epaonnistui "Creating report failed",
+ ;           :vanhentuneet_tutkinnot "Legacy degrees",
+ ;
+ ;           :voimassaolevat_tutkinnot "Current degrees",
+ ;           :rajaus_taustakysymyksilla "Filter based on background infomation",
+ ;           :vastaajat_joilla_ei_tutkintoa "Pick only respondents with no degree information",
+ ;
+ ;           :nimi {:koulutustoimijat "Compare organizations -report",
+ ;                  :kysely "Questionnaire report",
+ ;                  :kyselykerta "Questionnaire instance report",
+ ;                  :vertailu "Comparison report",
+ ;                  :kehitys "Development report"},
+ ;           :ei_tutkintotietoa "No degree information",
+ ;           :otsikko "Report title",
+ ;           :vastaukset "Responses",
+ ;
+ ;           :vastaajien_maara "Number of respondents",
+ ;
+ ;           :muodostetaan "Creating report",
+ ;
+ ;           :organisaatio "User's organization",
+ ;           :keskihajonta "Standard deviation",
+ ;           :ei_tulostettu "No answers were printed"},
+ ;:ohjeteksti "Instructions",
+ ;:kysymysryhma {:luo_uusi_kysymys "Create a new question",
+ ;               :nayta_rakenne "Show structure",
+ ;               :tallennus_onnistui "Question group saved",
+ ;               :valinta_ohjeistus "Choose a question group to add",
+ ;               :luonti_epaonnistui "Creating new question group failed",
+ ;               :lisaa_kysymys "Add question",
+ ;               :kuvaus "Optional text",
+ ;               :luo_uusi "Create a new question group",
+ ;               :sulkeminen_onnistui "Question group has been closed",
+ ;               :julkaisu_epaonnistui "Publishing question group failed",
+ ;               :palautus_julkaistuksi_epaonnistui "Reverting question group to published failed",
+ ;               :selite "Description",
+ ;               :poista_teksti "Question group will be permanently deleted and cannot be restored.",
+ ;               :sulkeminen_epaonnistui "Closing question group failed",
+ ;               :tallennus_epaonnistui "Saving question group failed",
+ ;               :palauta_julkaistuksi "Revert question group to published",
+ ;               :palautus_luonnokseksi_onnistui "Question group has been reverted to draft",
+ ;               :etsi "Find question groups",
+ ;               :luonti_onnistui "New question group was successfully created",
+ ;               :kysymysryhmat "Question groups",
+ ;               :poistaminen_onnistui "Question group has been deleted",
+ ;               :poistaminen_epaonnistui "Deleting question group failed",
+ ;               :palauta_luonnokseksi_teksti "Draft question group can be edited, but cannot be added to questionnaires.",
+ ;               :kysymykset "Questions",
+ ;               :nimi "Name",
+ ;               :rakenne "Structure of question group",
+ ;               :valinta "Choose a question group",
+ ;               :julkaise "Publish question group",
+ ;               :uusi "New question group",
+ ;               :valtakunnalliset "National",
+ ;               :palauta_julkaistuksi_teksti "Published question group can be added to questionnaires.",
+ ;               :sulje_teksti "Closed question group cannot be added to questionnaires or questionnaire templates.",
+ ;               :muokkaa "Edit question group",
+ ;               :taustakysymykset "Background questions",
+ ;               :sulje "Close question group",
+ ;               :julkaisu_onnistui "Question group has been published",
+ ;               :palauta_luonnokseksi "Revert question group to draft",
+ ;               :poista "Delete question group",
+ ;               :muokkaa_kysymysta "Edit question",
+ ;               :muut "Other",
+ ;               :julkaise_ohjeistus "Published question group cannot be edited. After publishing, question group can be added to questionnaires.",
+ ;               :asteikkojatkokysymyksen_kopiointi "Question group included continuation questions of type scale, which were not copied",
+ ;               :asteikkokysymyksen_kopiointi "Question group included questions of type scale, which were not copied",
+ ;               :valtakunnallinen "National",
+ ;               :kopioi "Copy",
+ ;               :palautus_julkaistuksi_onnistui "Question group has been reverted to published",
+ ;               :palautus_luonnokseksi_epaonnistui "Reverting question group to draft failed"},
+ ;:kysely {:taustakysymysryhma_puuttuu "Questionnaires including national question groups must include at least one national background question group!",
+ ;         :raportti_tulosta "Print report",
+ ;         :sulje_ohjeistus "Responses are not accepted for questionnaire instances of closed questionnaires.",
+ ;         :suljetun_kysymysryhman_kopiointi "Questionnaire included closed question groups, which were not copied",
+ ;         :tallennus_onnistui "Questionnaire saved",
+ ;         :nakyy_vastaajalle "visible to respondents",
+ ;         :breadcrumb_kyselyt "Questionnaires",
+ ;         :kuvaus "Questionnaire description",
+ ;         :sulkeminen_onnistui "Questionnaire has been closed",
+ ;         :julkaisu_epaonnistui "Publishing questionnaire failed",
+ ;         :breadcrumb_kopioi_kysely "Copy questionnaire",
+ ;         :breadcrumb_uusi_kysely "New questionnaire",
+ ;         :poisto_epaonnistui "Deleting questionnaire failed",
+ ;         :ei_kyselyita "No questionnaires",
+ ;         :tallennus_epaonnistui "Saving questionnaire failed",
+ ;         :uuden_luonti_epaonnistui "Creating new questionnaire failed",
+ ;         :samanniminen_kysely "There is a questionnaire with the same name",
+ ;         :etsi "Search for questionnaires",
+ ;         :raportti_tulosta_vapaatekstivastaukset "Print open answers",
+ ;         :poisto_onnistui "Questionnaire has been deleted",
+ ;         :nimi "Questionnaire name",
+ ;         :julkaise "Publish questionnaire",
+ ;         :otsikko "Your organization's questionnaires",
+ ;         :kyselykertojen_lajitteluperuste "Questionnaire instance sort order",
+ ;         :kyselykertojen_lajitteluperuste_luontiaika "Time created",
+ ;         :esikatsele "Preview",
+ ;         :muokkaa "Edit questionnaire",
+ ;         :lisaa_kysymysryhma "Add question group",
+ ;         :pohjan_haku_epaonnistui "Retrieving questionnaire template failed",
+ ;         :sulje "Close questionnaire",
+ ;         :ei_kyselykertoja "No questionnaire instances",
+ ;         :kyselykertojen_lajitteluperuste_nimi "Name",
+ ;         :ei_kysymysryhmia "No question groups",
+ ;         :julkaisu_onnistui "Questionnaire has been published",
+ ;         :poista "Delete questionnaire",
+ ;         :ryhman_haku_epaonnistui "Retrieving question group failed",
+ ;         :palautus_onnistui "Questionnaire has been opened",
+ ;         :lisaa_kyselypohja "Add questionnaire template",
+ ;         :raportti_tulosta_graafit "Print graphs",
+ ;         :julkaise_ohjeistus "Published questionnaire cannot be edited. After publishing, questionnaire instances can be created from questionnaire.",
+ ;         :poista_ohjeistus "Questionnaire will be permanently deleted and cannot be restored.",
+ ;         :liian_monta_lisakysymysta "Questionnaires may have max. 50 additional questions",
+ ;         :breadcrumb_muokkaa_kyselya "Edit questionnaire",
+ ;         :breadcrumb_kyselykerta "Questionnaire instance",
+ ;         :kopioi "Copy questionnaire",
+ ;         :raportti "Show report",
+ ;         :vastausaktiivisuus_lyhyt "Response turnout",
+ ;         :palauta "Restore questionnaire",
+ ;         :breadcrumb_uusi_kyselykerta "New questionnaire instance"},
+ ;:yleiset {:asti "Last",
+ ;          :voimassa "Valid",
+ ;
+ ;          :logo_url "../../img/ARVO_vaaka_en.png",
+ ;          :vastaajia "Number of respondents",
+ ;          :uudelleenohjaus_selite "Link",
+ ;          :anna_hakuehto "Give search term",
+ ;          :nakyy_vastaajalle "Visible to respondents",
+ ;          :pakollisia-kenttia "(*) Required field",
+ ;          :luo_uusi_kysely "Create a new questionnaire",
+ ;          :viimeisin_vastaus "The latest response submitted",
+ ;          :viimeisin_vastaus_lyhyt "The latest response",
+ ;          :avaa "Unlock",
+ ;          :etsitaan "Searching",
+ ;          :uudelleenohjaus "Redirection",
+ ;          :selite "Description for the question",
+ ;          :osaamisala "Specialisation",
+ ;
+ ;          :tietolahde "Data source Arvo - Education Effectiveness Finland",
+ ;          :tutkintotyyppi "Type of degree",
+ ;          :eos_teksti "Teksti",
+ ;          :palvelin_virhe "There was an error in the server. Try again in a few seconds.",
+ ;          :tallennus_epaonnistui "Saving failed",
+ ;          :palauta_julkaistuksi "Revert to published",
+ ;          :lataus_epaonnistui "Loading failed",
+ ;          :kysymys "Question",
+ ;          :kirjaudu_ulos_title "Log out",
+ ;          :oppilaitos "Educational institution",
+ ;          :ei_tuloksia "No results",
+ ;
+ ;          :nayttotutkintojen_palautejarjestelma "Education Effectiveness Finland",
+ ;          :nimi_otsikko "Name",
+ ;          :tutkinnon_jarjestaja "Organiser of competence test",
+ ;          :tallennataan "Saving",
+ ;          :julkaise "Publish",
+ ;          :uudelleenohjaus_kokeile "Try out the link",
+ ;          :pakollinen "Required",
+ ;          :tutkinnon_suorituskieli "Language of degree",
+ ;
+ ;          :nayta_suljetut "Show closed",
+ ;          :lukittu "locked",
+ ;          :luonnokset "Drafts",
+ ;          :palvelun_otsikko "Arvo",
+ ;          :ruotsiksi "på svenska",
+ ;          :piilota_suljetut "Hide closed",
+ ;          :valiotsikko "Väliotsikko",
+ ;          :muokkaa "Edit",
+ ;          :lisaa "More"
+ ;          :lataa "Download"
+ ;          :sulje "Close",
+ ;          :tila "Status"
+ ;          :lisaa_valittu "Add chosen",
+ ;          :tutkinto "Degree",
+ ;          :englanniksi "In English",
+ ;          :haluatko_kirjautua_ulos "Are you sure you want to log out? If not, press cancel.",
+ ;          :koulutusmuoto "Form of education",
+ ;          :alkaen "Starting",
+ ;          :palauta_luonnokseksi "Revert to draft",
+ ;          :poista "Delete",
+ ;          :vastaajatunnukset "Credentials for respondents",
+ ;          :kyselykerta "Questionnaire instance",
+ ;          :istunto_vanhentunut {:ohje "Please login again.", :otsikko "You session has timed out"},
+ ;          :julkaistut_valtakunnalliset "Published national",
+ ;          :valtakunnallinen "National",
+ ;          :tyyppi "Type",
+ ;          :yrita_uudelleen "Try again",
+ ;          :julkaistut "Published",
+ ;          :lukitse "Lock",
+ ;          :suomeksi "suomeksi",
+ ;          :palauta "Revert"
+ ;
+ ;          :valinnainen "Optional"}

@@ -1,0 +1,138 @@
+.kysely {
+    padding: 1rem;
+    color: #2f487f;
+}
+
+table.indikaattorit {
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.indikaattorit thead {
+    background-color: #2f487f;
+    color: white;
+}
+
+.indikaattorit thead th,
+.indikaattorit tbody td {
+    border: solid #2f487f 1px;
+}
+
+.indikaattorit thead th {
+    padding: 1rem;
+    vertical-align: top;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+}
+
+.indikaattorit tbody td {
+    vertical-align: top;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.indikaattorit tbody td.indikaattori,
+.indikaattorit tbody td.toiminnot {
+    padding: 1rem;
+}
+
+/* for accordion (avaa / sulje): */
+.indikaattorit tbody td.indikaattori div {
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.indikaattorit thead th.indikaattoriryhma {
+    text-align: left;
+    width: 20%;
+}
+.indikaattorit thead th.tyokalut {
+    text-align: left;
+    width: 33%;
+}
+.indikaattorit tbody th {
+    text-align: left;
+}
+.indikaattorit thead th.toiminnot,
+.indikaattorit tbody td.toiminnot {
+    text-align: right;
+    width: 13%;
+}
+
+/* indikaattorilistaukset */
+
+.indikaattorit tbody td ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+.indikaattorit tbody td ul li {
+    margin-left: 0;
+    padding-bottom: 0.6rem;
+}
+
+/* arviointityökalujen tyylit */
+
+/* flex */
+.lomake-container {
+    display: flex;
+    align-items: center;
+}
+
+.toiminnot {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.right-container {
+    text-align: left;
+}
+
+.right-container:last-of-type {
+    padding-bottom: 1rem;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+.button-container a {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+ol.kysely-list {
+    padding-left: 0;
+    position: relative;
+    top: -0.5rem;
+    list-style-type: none;
+}
+span.tag-active,
+span.tag-inactive {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.25rem;
+}
+span.tag-active {
+    background-color: #85c598;
+}
+span.tag-inactive {
+    background-color: #eae8e6; /* cool grey 20% */
+}
+
+span.tag-active,
+span.tag-inactive {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.1rem 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.25rem;
+}
+span.tag-active {
+    background-color: #85c598;
+}
+span.tag-inactive {
+    background-color: #eae8e6; /* cool grey 20% */
+}

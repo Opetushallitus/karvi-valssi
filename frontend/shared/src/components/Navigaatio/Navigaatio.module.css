@@ -1,0 +1,172 @@
+nav {
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_right {
+    min-width: 0; /* Needed for ellipses to form */
+}
+
+@media screen and (min-width: 700px) {
+    .logo_img {
+        margin-left: 2rem;
+    }
+}
+
+.instructionsLink {
+    color: #2f487f;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.4rem;
+}
+
+.instructionsLink a {
+    text-decoration: none;
+}
+
+.header_title {
+    display: flex;
+}
+
+.header_subtitle_fi {
+    color: #000000;
+    font-size: 18px;
+    margin-left: 2rem;
+    align-self: center;
+    max-width: 240px;
+}
+
+.header_subtitle_sv {
+    color: #000000;
+    font-size: 18px;
+    margin-left: 2rem;
+    align-self: center;
+    max-width: 240px;
+}
+
+@media screen and (max-width: 590px) {
+    .header_subtitle_fi {
+        display: none;
+    }
+    .header_subtitle_sv {
+        display: none;
+    }
+}
+
+.menu-wrapper {
+    text-align: right;
+    margin-top: 1.5rem;
+    padding: 0.2rem 0.2rem;
+}
+
+.menu-wrapper .user-button {
+    padding: 0;
+    background: none;
+    color: #2f487f;
+    text-transform: none;
+    margin: 0;
+}
+
+.menu-wrapper .user-button svg {
+    margin-left: 0.3rem;
+}
+
+.menu-wrapper .user-button svg:first-child {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+.user-info {
+    padding: 0.2rem 0.05rem;
+}
+
+.user-uid, .user-role, .user-org {
+    padding: 0 0.15rem;
+}
+
+.user-divider {
+    padding: 0 0.15rem;
+}
+
+.imp-bg {
+    background-color: #EF9F3C;
+}
+
+.navlinks {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #2f487f;
+}
+
+.impersonation {
+    margin-left: auto;
+}
+
+nav .navlinks a {
+    padding: 1rem 3rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.03rem;
+    font-weight: 400;
+}
+
+nav .navlinks a.selected {
+    background-color: #d5dae5;
+    color: #2f487f;
+    font-weight: 700;
+}
+
+nav .navlinks a:hover {
+    background-color: #d5dae5;
+    color: #2f487f;
+}
+
+.footer {
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.footerLogo {
+    margin-left: 2rem;
+}
+
+.footerLogo:hover {
+    background-color: transparent;
+}
+
+.footer > * {
+    margin-bottom: 1rem;
+}
+
+.footerLinks {
+    display: flex;
+    flex-flow: wrap;
+    padding-right: 1rem;
+}
+
+.footerLinks ul {
+    list-style: none;
+    padding: 0 0 0 2rem;
+    margin:  0; /* differs from default */
+}
+
+.footerLinks ul li {
+    padding: 0.5rem 0;
+}
+
+.footerLinks ul li a {
+    text-decoration: none;
+}

@@ -1,0 +1,119 @@
+.section-container {
+    padding: 1rem 0;
+}
+
+.date-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.grid-label {
+    font-weight: bold;
+}
+
+/* white background for textarea inside this container is implemented in shared/index.css: .app .MuiOutlinedInput-root */
+.message-container {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f7f7f7;
+}
+
+.accompanying-msg {
+    border: 1px solid #4188b9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.accompanying-msg h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.accompanying-msg p {
+    white-space: pre-line;
+}
+
+.required-fields-info {
+    padding-top: 0.5rem;
+}
+
+.people-list-wrapper {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f7f7f7;
+}
+.filter-people {
+    width: 50%;
+    max-width: 20rem;
+    display: block;
+    margin: 0.5rem 0 2rem 0;
+}
+ul.people-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+ul.people-list li {
+    margin-bottom: 0;
+    display: block;
+}
+ul.people-list h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+ul.people-list span {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    margin-right: 0.3rem;
+}
+.select-all-people-wrapper {
+    padding: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+}
+.people-list-header {
+    display: block;
+    margin-top: 1.3rem;
+    font-weight: bold;
+}
+.has-sent-list-wrapper {
+    margin-bottom: 1rem;
+}
+.has-sent-list-wrapper ul {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: block;
+}
+.has-sent-list-wrapper li {
+    margin-bottom: 0.7rem;
+    display: block;
+}
+
+.has-sent-list-wrapper li .sent-prople-item {
+    display: flex;
+    align-items: center;
+}
+
+.has-sent-list-wrapper li .sent-prople-item .sent-people-item-name {
+    flex: 1 1 33%;
+}
+
+.has-sent-list-wrapper li .sent-prople-item .sent-people-item-btn {
+    flex: 2 2 66%;
+}
+
+
+
+.people-list-disabled {
+    color: rgba(0, 0, 0, 0.38);
+}

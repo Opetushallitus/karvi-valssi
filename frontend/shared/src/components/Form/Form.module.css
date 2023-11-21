@@ -1,0 +1,59 @@
+.input-field {
+    flex: 1 0;
+}
+
+.icon-buttons {
+    margin-left: 50px;
+    flex-grow: 0;
+}
+
+.KysymysFieldContainer {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.KysymysFieldContainer.editable {
+    border: #2f487f solid 1px;
+    padding: 1rem;
+}
+
+.KysymysFieldContainer.hidden {
+    border: gray solid 1px;
+    padding: 1rem;
+    color: gray;
+}
+
+.KysymysContent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.KysymysHiddenIndicator {
+    margin: 0;
+    display: inline;
+    font-weight: bold;
+}
+
+.checkbox-desc {
+    margin-left: 2rem;
+}
+
+.checkbox-label {
+    margin-right: 0;
+}
+
+.EmailField {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.Indikaattorit {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.Indikaattorit p {
+    margin-top: 0;
+}

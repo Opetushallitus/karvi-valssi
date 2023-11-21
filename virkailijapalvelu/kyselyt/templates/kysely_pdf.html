@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <div class="logo-div">
+        <img src="{{ logo_src }}" alt="logo">
+    </div>
+
+    {% if kysymysryhma is not None %}
+
+        {% if language == "fi" %}
+        <h1>{{ kysymysryhma.nimi_fi }}</h1>
+        {% else %}
+        <h1>{{ kysymysryhma.nimi_sv }}</h1>
+        {% endif %}
+
+        {% for indicator_text in indicator_texts %}
+        <p>{{ indicator_text }}</p>
+        {% endfor %}
+
+    {% endif %}
+
+    (((KYSYMYS_CONTENT)))
+
+</html>

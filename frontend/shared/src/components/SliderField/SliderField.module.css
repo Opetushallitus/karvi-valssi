@@ -1,0 +1,13 @@
+.slider-wrapper {
+    width: 100%;
+}
+
+.slider-root {
+    margin: 0;
+    min-width: 15rem;
+    width: 100%;
+}
+
+.input-field {
+    flex: 1 0;
+}

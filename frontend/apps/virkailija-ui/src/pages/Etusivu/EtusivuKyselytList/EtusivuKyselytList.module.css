@@ -1,0 +1,37 @@
+.kysely-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.kysely {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    border: solid #4188b9 1px;
+    padding: 1rem;
+    color: #2f487f;
+    margin-top: 1.5rem;
+    margin-left: 0;
+}
+
+.kysely.toteuttaja {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.kyselylink {
+    margin-right: 1rem;
+}
+
+.kysely-toimipaikka-list {
+    margin-top: 1rem;
+}
+
+.kysely-toimipaikka-container > div {
+    display: inline-block;
+}
+
+.kysely-toimipaikka-nimi {
+    margin-right: 1rem;
+}

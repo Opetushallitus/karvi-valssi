@@ -1,0 +1,48 @@
+@page {
+    margin: 5mm; /* Set margin on each page */
+}
+
+html {
+    font-family: 'Lato';
+    font-size: 18px;
+    background-color: white;
+    margin: 0;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h3 {
+    margin: 30px 0 25px 0;
+    font-size: 20px;
+}
+
+a {
+    color: #2f487f;
+}
+
+.logo-div {
+    margin: 0 auto 0 auto;
+    width: 400px; /* Logo width */
+}
+
+.logo-div img {
+    width: inherit;
+}
+
+.koulutustoimija {
+    margin-bottom: 30px;
+}
+
+.svg-img {
+    margin-top: 0;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.secondary_indicators {
+    margin-top: 5px;
+}

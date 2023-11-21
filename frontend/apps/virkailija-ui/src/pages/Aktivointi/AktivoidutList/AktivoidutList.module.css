@@ -1,0 +1,15 @@
+.activated-list {
+    background-color: #EDEDED;
+    height: 430px;
+    width: 300px;
+    overflow: auto;
+}
+
+.activated-listitem {
+    /* to compensate checkbox height on multiselect */
+    height: 50px;
+}
+
+.activated-listitem-text {
+    color: #6E6E6E;
+}

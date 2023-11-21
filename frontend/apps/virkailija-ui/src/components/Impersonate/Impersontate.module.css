@@ -1,0 +1,24 @@
+.list ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin:  0; /* differs from default */
+}
+
+.list ul li {
+    padding: 0.25rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.roletext {
+    padding: 0.55rem 1rem 0.55rem 0;
+}
+
+.roletext-org {
+    font-weight: bold;
+}
+
+.list ul li button {
+    margin: 0 !important;
+}

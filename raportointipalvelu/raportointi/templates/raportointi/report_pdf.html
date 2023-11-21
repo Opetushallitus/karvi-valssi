@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang={{ html_data.language }}>
+    <div class="logo-div">
+        <img src="{{ logo_src }}" alt="logo">
+    </div>
+
+    {% if html_data %}
+        <div class="report-data">
+            {% include "raportointi/report_data.html" with html_data=html_data %}
+        </div>
+    {% endif %}
+</html>

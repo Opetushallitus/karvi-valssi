@@ -1,0 +1,30 @@
+.playlist-add-icon {
+    font-size: 1.5rem;
+    color: #2f487f;
+}
+.remove-icon {
+    color: #d64c1d;
+}
+
+.answer-options {
+    margin-top: 3rem;
+}
+
+.answer-option-row {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.answer-option-row__input {
+    width: 100%;
+}
+
+.answer-option-row__remove {
+    align-self: end;
+    padding-bottom: 0.25rem;
+}
+
+.answer-option-desc {
+    margin-bottom: 3rem;
+}

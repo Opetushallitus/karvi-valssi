@@ -1,0 +1,13 @@
+.kieli-title-container {
+    width: 100%;
+}
+
+.kieli-title {
+    border-radius: 0%;
+    background-color: #4188b9;
+    color: white;
+    border: none;
+    padding: 0.375rem 2rem;
+    margin: 0.625rem 0 0 0;
+    width: fit-content;
+}

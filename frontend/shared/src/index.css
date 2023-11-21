@@ -1,0 +1,563 @@
+/* base styles: basic html elements */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', 'Roboto', 'Oxygen', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    margin: 2.5rem 0 1.5rem 0;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 2rem 0 1.25rem 0;
+    font-size: 1.125rem;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+button::first-letter {
+    text-transform: uppercase;
+}
+
+a {
+    color: #2f487f;
+}
+a:hover {
+    background-color: #eaedf2;
+} /* blue 10% */
+
+p {
+    margin-top: 0.8rem;
+}
+
+p.plaintext {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p.info {
+    margin-top: 0;
+}
+
+p.error {
+    color: #b90729;
+    display: flex;
+    align-items: center;
+}
+p.error svg {
+    margin-right: 0.5rem;
+}
+
+.overall-error {
+    color: #b90729;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles for page structure */
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    background-color: white;
+    padding: 0.5rem 3rem 1.5rem 3rem;
+    flex: 100%;
+}
+
+/* button styles: link that looks like a button, real button, small, secondary *********************************/
+
+/* link that looks like a button */
+
+.button-alike {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    background-color: #2f487f;
+    color: white;
+    border: 1px solid #2f487f;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    text-decoration: none;
+}
+
+.button-alike::first-letter {
+    text-transform: uppercase;
+}
+
+/* link that looks like a button, small version */
+
+.button-alike.small {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.button-alike:hover {
+    background-color: #d5dae5;
+    color: #2f487f;
+    border-color: #d5dae5;
+}
+
+.button-alike:active {
+    border-color: black;
+}
+
+.button-alike:focus {
+    background-color: #d5dae5; /* blue 20% */
+    color: #2f487f;
+    border: solid #2f487f 1px;
+    border-radius: 0;
+}
+
+.button-alike.disabled {
+    background-color: #6e6e6e;
+    color: white;
+    cursor: default;
+}
+
+.button-alike.disabled:hover {
+    background-color: #6e6e6e;
+    color: white;
+    cursor: default;
+}
+
+.button-alike.secondary {
+    color: #2f487f;
+    background-color: white;
+    border: solid #4188b9 1px;
+}
+
+.button-alike.secondary:hover {
+    background-color: #d5dae5;
+    color: #2f487f;
+}
+
+/* text button style */
+
+.app button.link-alike {
+    color: #2f487f;
+    background-color: white;
+    text-transform: unset;
+    font-size: 0.875rem;
+    padding: 0.025rem 1rem 0.025rem 0;
+    font-weight: bold;
+}
+
+.app span.link-alike {
+    color: #2f487f;
+    padding: 0.025rem 0 0.025rem 0;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.app span.link-alike:hover {
+    background-color: #d5dae5;
+    color: #2f487f;
+    cursor: pointer;
+}
+
+/* basic button */
+
+.app button {
+    border-radius: 0;
+    background-color: #2f487f;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.app button:disabled {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+.app button:disabled:hover {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+.app button:hover {
+    background-color: #d5dae5;
+    border: solid 1px rgba(255, 255, 255, 0);
+    color: #2f487f;
+}
+
+.app button:active {
+    border: solid 1px rgba(255, 255, 255, 0);
+}
+
+.app button:focus {
+    background-color: #d5dae5; /* blue 20% */
+    color: #2f487f;
+    border: solid #2f487f 1px;
+    border-radius: 0;
+}
+
+/* small button */
+
+.app button.small {
+    text-transform: unset;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.app button.verysmall {
+    text-transform: unset;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem 0.25rem 0;
+}
+
+/* secondary button style */
+
+.app button.secondary {
+    color: #2f487f;
+    background-color: white;
+    border: solid #4188b9 1px;
+}
+
+.app button.secondary:hover {
+    color: #2f487f;
+    background-color: #d5dae5; /* blue 20% */
+    border: double #2f487f 1px;
+}
+
+.app button.secondary:disabled {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+.app button.secondary:disabled:hover {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+/* warning button style */
+
+.app button.warning {
+    color: #b90729;
+    background-color: white;
+    border: solid #b90729 1px;
+}
+
+.app button.warning:hover {
+    color: #b90729;
+    background-color: #b9072919; /* #b90729 10% */
+    border: double #b90729 1px;
+}
+
+.app button.warning:disabled {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+.app button.warning:disabled:hover {
+    background-color: #6e6e6e;
+    color: white;
+    border: solid 1px rgba(255, 255, 255, 0);
+    cursor: default;
+}
+
+/* icon button style */
+
+.app .icon-button {
+    border-radius: 0;
+    color: #2f487f;
+    background-color: white;
+    padding: 0.75rem;
+    margin: 0;
+}
+
+.app .icon-button:hover,
+.MuiButtonBase-root.icon-button:hover {
+    background-color: #d5dae5;
+    color: #2f487f;
+}
+
+.app .MuiButtonBase-root.Mui-disabled {
+    color: grey;
+    background-color: inherit;
+}
+
+.app .textfield-button {
+    padding: 0;
+    color: #6e6e6e;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.app .icon-button-alert:hover {
+    background-color: rgba(13, 47, 210, 0.1);
+}
+
+.app .icon-button-alert {
+    background-color: unset;
+}
+
+/* #2f487f; */
+.app .textfield-button:hover,
+.app .textfield-button:focus,
+.app .textfield-button:active {
+    color: #2f487f;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.app .input-resize textarea.MuiOutlinedInput-input {
+    resize: vertical;
+}
+
+/* styles for button groups */
+
+.app div.button-container {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.app div.button-container > button,
+.app div.button-container > a {
+    margin-right: 1rem;
+}
+
+.button-container-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* styles for inputs ************************************************************/
+
+.MuiTextField-root.error input, /* for text inputs */
+.MuiTextField-root.error {
+    /* for textareas */
+    border: solid #b90729 1px;
+    color: #b90729;
+}
+
+.app .MuiButtonBase-root.MuiRadio-root,
+.app .MuiButtonBase-root.MuiRadio-root.hidden,
+.app .MuiButtonBase-root.MuiCheckbox-root,
+.app .MuiButtonBase-root.MuiCheckbox-root.hidden,
+.app input[type='radio'],
+.app input[type='checkbox'],
+.app input[type='radio'].hidden,
+.app input[type='checkbox'].hidden
+{
+    color: #6e6e6e;
+}
+
+.app .MuiFormControl-root.Mui-checked,
+.app .MuiCheckbox-root.Mui-checked,
+.app .MuiRadio-root.Mui-checked {
+    color: #2f487f;
+}
+
+.app .MuiFormControl-root.Mui-disabled,
+.app .MuiButtonBase-root.MuiRadio-root.disabled,
+.app .MuiButtonBase-root.MuiCheckbox-root.disabled,
+.app .MuiCheckbox-root.Mui-disabled,
+.app .MuiRadio-root.Mui-disabled,
+.app input[type='radio'].disabled,
+.app input[type='checkbox'].disabled {
+    color: rgba(0, 0, 0, 0.38)
+}
+
+/* note! this will override material ui different sizes -> no small input available */
+input[type='text'] {
+    height: 1.125rem;
+    font-size: 1.125rem;
+    padding: 0.9375rem;
+}
+
+/* override material ui rounded corners */
+.app .MuiOutlinedInput-root,
+.MuiInputBase-root.MuiOutlinedInput-root {
+    border-radius: 0;
+    background-color: white;
+}
+
+/* label styles */
+
+.app .label-for-inputfield {
+    display: block;
+    font-size: 1rem;
+    margin: 1.3rem 0 0.5rem 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.app .label-for-inputfield.hidden {
+    color : gray;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.app .label-for-inputfield.error {
+    color: #b90729;
+}
+
+/* */
+
+.app .field-row {
+    display: flex;
+    gap: 3rem;
+    /*width: calc(100% - 40px);*/
+    width: 100%;
+}
+
+.app .field-row-first-column, .app .field-row-second-column {
+    width: 100%;
+}
+
+.app .field-row-first-column-with-controls {
+    width: calc(100% + 40px);
+}
+
+.app .field-row-second-column-with-controls {
+    width: calc(100% - 40px);
+}
+
+/* for info toggle */
+.app .label-for-inputfield span.MuiCheckbox-root {
+    padding: 0 0 0 0;
+    margin-left: 0.5rem;
+}
+
+.app .MuiFormLabel-root {
+    color: black;
+}
+
+/* https://www.w3.org/WAI/tutorials/forms/labels/ */
+.label-visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+/* dialog ************************************************************/
+
+.app .dialog-container {
+    background-color: rgba(185, 185, 185, 0.5); /*B9B9B9*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2; /* material ui text input placeholder has z-index 1, dialog must be above text input placeholder layer */
+    overflow-y: auto;
+}
+
+.app .dialog {
+    background-color: white;
+    opacity: 1;
+    margin: 2rem;
+    padding: 1.5rem;
+    border: solid #4188b9 1px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.MuiPaper-root h1,
+.app .dialog h1 {
+    margin: 0.5rem 0 1rem 0;
+}
+
+.MuiDialog-root .MuiBackdrop-root {
+    background-color: rgba(185, 185, 185, 0.5); /*B9B9B9*/
+}
+
+.MuiPaper-root.MuiDialog-paper {
+    border-radius: 0;
+    padding: 1.5rem;
+    margin: 2rem;
+    border: solid #4188b9 1px;
+    box-shadow: 0 0 0 0;
+}
+
+.MuiSelect-select.MuiInputBase-input.MuiOutlinedInput-input {
+    border-radius: 0;
+}
+
+/* other (page specific) mui overrides.
+General MUI overrides can be set in theme.ts  */
+
+/* aktivointi page styles */
+.MuiGrid-root.MuiGrid-item.activated-grid {
+    padding-top: calc(9rem - 4px);
+    padding-left: 3rem;
+}
+
+.MuiGrid-root.MuiGrid-item.selected-grid {
+    padding-top: calc(9rem - 4px);
+    padding-left: 0.5rem;
+}
+
+/*Navigation menu style overides*/
+html body .MuiMenu-list {
+    min-width: 17.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.MuiMenu-list .MuiMenuItem-root {
+    border-bottom: 1px solid rgba(47, 72, 127, 0.2);
+    text-align: left;
+    display: block;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    white-space: normal;
+}
+
+.MuiMenu-list .MuiMenuItem-root:last-child {
+    border-bottom: 0;
+}
