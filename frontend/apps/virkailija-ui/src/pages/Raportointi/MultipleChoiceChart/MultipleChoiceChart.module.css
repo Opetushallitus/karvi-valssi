@@ -1,0 +1,13 @@
+.chart-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.answer-count {
+    display: block;
+    margin: 0.2rem 0 0.5rem 0;
+}
+
+.label-text {
+    margin-right: 0.2rem;
+}

@@ -1,0 +1,25 @@
+.langButtons button.secondary {
+    background-color: #ffffff;
+    color: #2f487f;
+    border: solid 1px #4188b9;
+}
+
+.langButtons button.secondary:hover,
+.langButtons button.secondary:focus {
+    background-color: #f5f5f5;
+    color: #2f487f;
+    border: solid 1px #4188b9;
+}
+
+.langButtons button.secondary:disabled {
+    background-color: #2f487f;
+    color: #ffffff;
+    border: solid 1px #4188b9;
+}
+
+.langButtons button.secondary:disabled:hover,
+.langButtons button.secondary:disabled:focus {
+    background-color: #2f487f;
+    color: #ffffff;
+    border: solid 1px #4188b9;
+}

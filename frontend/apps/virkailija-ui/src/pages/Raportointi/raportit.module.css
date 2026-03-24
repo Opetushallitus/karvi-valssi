@@ -1,0 +1,162 @@
+.raporti-page-wrapper {
+}
+
+.raporti-page-header-wrapper {
+}
+
+.raporti-page-content-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.raportti-options-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.raportti-options-wrapper > :first-child {
+    padding-right: 2rem;
+}
+
+.raporti-navigation-wrapper {
+    border: 2px solid #2f487f;
+    padding: 2rem;
+    margin: 2rem 0;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.view-raportti-buttons {
+    display: flex;
+}
+
+ul.raport-navigation {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.raport-navigation li {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.raporti-wrapper {
+    border: 2px solid #2f487f;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.raporti-wrapper-no-borders {
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.raporti-wrapper h3,
+.raporti-wrapper-no-borders h3 {
+    margin-bottom: 2rem;
+}
+
+.secondary-heading-wrapper h3 {
+    margin: 0.5rem 0;
+}
+
+.main-heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+.main-heading-wrapper button {
+    margin: 0;
+}
+
+.grid-header div {
+    background: #2f487f;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0.7rem 0;
+}
+
+.grid-header h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+}
+
+.grid-row {
+}
+
+.grid-row * {
+    display: flex;
+    align-items: center;
+}
+
+.grid-row p {
+    padding: 1rem;
+    margin: 0;
+    color: #2f487f;
+    align-self: flex-start;
+}
+
+.report-link {
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.report-link * {
+    margin: 0;
+    color: #2f487f;
+    align-self: flex-start;
+}
+
+.grid-center-column {
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-center-column * {
+    margin-right: 0;
+}
+
+.grid-right-column {
+    text-align: right;
+    justify-content: flex-end;
+    flex-wrap: inherit;
+    align-content: center;
+}
+
+.grid-right-column * {
+    margin-right: 1rem;
+}
+
+.no-link {
+    color: #2f487f;
+    padding: 0;
+}
+
+.linkToSummaryView {
+    font-weight: bold;
+    display: flex;
+    margin: 1rem;
+}
+.filter-dropdowns-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter-dropdowns-wrapper > * {
+    flex: 1;
+}
+.filter-dropdowns-wrapper > :first-child {
+    margin-right: 1rem;
+}
+
+.dropdown-wrapper {
+    min-width: 20rem;
+    max-width: 40rem;
+}
+.filter-buttons {
+    text-align: right;
+}
+.result-textfield-wrapper,
+.summary-textfield-wrapper {
+    margin: 0.8rem 0 0.8rem 0;
+}

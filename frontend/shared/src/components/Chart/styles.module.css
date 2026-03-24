@@ -1,0 +1,141 @@
+.chart,
+.empty {
+    display: flex;
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 2.5rem;
+}
+.empty {
+    justify-content: center;
+}
+.list-cutter {
+    width: 100%;
+    overflow: hidden;
+}
+.empty li {
+    padding-left: 0.5rem;
+    background: white;
+}
+.empty li span {
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+.chart li,
+.empty li {
+    border-right: 3px solid black;
+    min-width: 0.6rem;
+    padding: 0;
+    margin: 0;
+}
+.chart li span,
+.empty li span {
+    display: block;
+    padding: 0.7rem 0;
+    text-align: center;
+}
+.chart li:last-child,
+.empty li:last-child {
+    border-right: 0;
+}
+.list-wrapper {
+    display: flex;
+    margin-left: 5%;
+    width: 65%;
+    position: relative;
+}
+.list-wrapper p {
+    width: 2rem;
+    position: absolute;
+    top: -0.1rem;
+    right: -2.3rem;
+    display: inline-block;
+}
+
+/*1-6*/
+.item-0-range-1-6,
+.item-0-range-1-6::after {
+    background: #ef9f3c;
+}
+.item-1-range-1-6,
+.item-1-range-1-6::after {
+    background: #f9d9b1;
+}
+.item-2-range-1-6,
+.item-2-range-1-6::after {
+    background: #0d93d2;
+}
+.item-3-range-1-6,
+.item-3-range-1-6::after {
+    background: #9ed4ed;
+}
+.item-4-range-1-6,
+.item-4-range-1-6::after {
+    background: #cee8e6;
+}
+.item-5-range-1-6,
+.item-5-range-1-6::after {
+    background: #85c598;
+}
+/*1-5*/
+.item-0-range-1-5,
+.item-0-range-1-5::after {
+    background: #ef9f3c;
+}
+.item-1-range-1-5,
+.item-1-range-1-5::after {
+    background: #f9d9b1;
+}
+.item-2-range-1-5,
+.item-2-range-1-5::after {
+    background: #0d93d2;
+}
+.item-3-range-1-5,
+.item-3-range-1-5::after {
+    background: #cee8e6;
+}
+.item-4-range-1-5,
+.item-4-range-1-5::after {
+    background: #85c598;
+}
+/*1-4*/
+.item-0-range-1-4,
+.item-0-range-1-4::after {
+    background: #ef9f3c;
+}
+.item-1-range-1-4,
+.item-1-range-1-4::after {
+    background: #f9d9b1;
+}
+.item-2-range-1-4,
+.item-2-range-1-4::after {
+    background: #cee8e6;
+}
+.item-3-range-1-4,
+.item-3-range-1-4::after {
+    background: #85c598;
+}
+/*1-3*/
+.item-0-range-1-3,
+.item-0-range-1-3::after {
+    background: #ef9f3c;
+}
+.item-1-range-1-3,
+.item-1-range-1-3::after {
+    background: #0d93d2;
+}
+.item-2-range-1-3,
+.item-2-range-1-3::after {
+    background: #85c598;
+}
+/*1-2*/
+.item-0-range-1-2,
+.item-0-range-1-2::after {
+    background: #ef9f3c;
+}
+.item-1-range-1-2,
+.item-1-range-1-2::after {
+    background: #85c598;
+}

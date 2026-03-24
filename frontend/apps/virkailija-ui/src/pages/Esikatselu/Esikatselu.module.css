@@ -1,0 +1,6 @@
+.header {
+    display: flex;
+}
+.header svg {
+    margin-left: 0.5rem;
+}

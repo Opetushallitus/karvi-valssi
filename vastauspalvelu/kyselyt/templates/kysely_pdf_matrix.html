@@ -1,0 +1,62 @@
+<div class="matrix-row">
+    <div class="{{ matrix_type }}-question-col-length-{{ scale_step_count }}"></div>
+
+    <div class="scales scale-col">
+        {% if matrix_type == "slider" %}
+            <div class="scale-item scale-item-length-{{ scale_step_count }}">
+                {{ scale_first }}
+            </div>
+
+            {% for scale_middle in scale_middles %}
+                <div class="scales-middle scales-length-{{ scale_step_count }}">
+                    <div class="scale-middle-item">{{ scale_middle }}</div>
+                </div>
+            {% endfor %}
+
+            <div class="scale-item scale-item-length-{{ scale_step_count }}">
+                {{ scale_last }}
+            </div>
+        {% elif matrix_type == "radio" %}
+            {% for scale_point in scale_points %}
+                <div class="matrix-radiobutton-div">{{ scale_point }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% for subq in subquestions %}
+<hr>
+<div class="matrix-row">
+    <div class="{{ matrix_type }}-question-col-length-{{ scale_step_count }}">
+        <p class="subquestion">{{ subq.question }}{{ mandatory_append }}</p>
+        {% if subq.description is not None %}
+        <p class="subquestion-description"><span class="info-dot"></span>{{ subq.description }}</p>
+        {% endif %}
+    </div>
+
+    <div class="matrix-{{ matrix_type }}-div">
+        {% if matrix_type == "slider" %}
+            <div class="slider-div">
+                <span class="slider-root">
+                    <span class="slider-rail"></span>
+                    {% for slidermark in subq.slidermarks %}
+                        <span class="slider-mark{{ slidermark.checked }}" data-index="{{ slidermark.index }}" style="left: {{ slidermark.percentage }}%"></span>
+                    {% endfor %}
+                </span>
+            </div>
+        {% elif matrix_type == "radio" %}
+            <div class="matrix-radiobuttons">
+                {% for radiobutton in subq.radiobuttons %}
+                    <div class="matrix-radiobutton-div"><input type="radio" {{ radiobutton.checked }}></div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if subq.eos.allowed %}
+            <div class="eos-div">
+                <div><input type="checkbox" {{ subq.eos.checked }}>{{ subq.eos.text }}</div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}

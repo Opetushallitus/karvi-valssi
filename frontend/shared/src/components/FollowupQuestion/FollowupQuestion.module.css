@@ -1,0 +1,26 @@
+.remove-icon {
+    color: #d64c1d;
+}
+
+.follow-up-box {
+    /*border: solid 1px #8c8c8c;*/
+}
+
+.follow-up-box > :nth-child(2),
+.follow-up-box > :nth-child(3),
+.follow-up-box > :nth-child(4),
+.follow-up-box > :nth-child(5) {
+    margin-left: 2rem;
+}
+
+.follow-up-box > :nth-child(6) {
+    margin-left: 1rem;
+}
+
+.select-rules-title {
+    font-weight: bold;
+}
+
+.select-rules-dropdown {
+    width: 90%;
+}

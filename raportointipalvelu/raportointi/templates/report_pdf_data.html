@@ -1,0 +1,61 @@
+<h1>{{ html_data.title }}</h1>
+
+{% if html_data.indicator_texts %}
+    <p>{{ html_data.indicator_title }}</p>
+
+    {% for indicator_text in html_data.indicator_texts %}
+    <p class="indicator-text">{{ indicator_text }}</p>
+    {% endfor %}
+{% endif %}
+
+<h3 class="koulutustoimija">{{ html_data.koulutustoimija }}</h3>
+
+{% if show_filters %}
+    <p class="filter-title">{{ filter_texts.title }}</p>
+    <p class="filter-object">{{ filter_texts.jobtitle_title }}: {{ filter_texts.jobtitle }}</p>
+    <p class="filter-object">{{ filter_texts.eligibility_title }}: {{ filter_texts.eligibility }}</p>
+    <p class="filter-object">{{ filter_texts.language_title }}: {{ filter_texts.language }}</p>
+    <p class="filter-object">{{ filter_texts.aluejako_title }}: {{ filter_texts.aluejako }}</p>
+{% endif %}
+
+<p>{{ html_data.data_collection_title }} {{ html_data.created_date }}</p>
+
+{% if html_data.report_oppilaitos_answered_text %}
+<p>{{ html_data.report_oppilaitos_answered_title }} {{ html_data.report_oppilaitos_answered_text }}</p>
+{% endif %}
+
+{% if html_data.report_percentage_text %}
+<p>{{ html_data.report_percentage_title }} {{ html_data.report_percentage_text }}</p>
+{% endif %}
+
+<p>{{ html_data.main_helptext }}</p>
+
+<a href="{{ html_data.link }}">{{ html_data.link_text }}</a>
+
+<p class="empty_p">&nbsp;</p>
+
+{% for question in html_data.questions %}
+    <h3 class="margin-bottom-0">{{ question.title }}</h3>
+
+    <p class="margin-bottom-0">{{ question.description }}</p>
+
+    {% if question.answerer_counts %}
+    <p class="margin-bottom-0">{{ question.answerer_counts }}</p>
+    {% endif %}
+
+    {% if question.svg_base64s %}
+    {% for svg_base64 in question.svg_base64s %}
+    <img class="svg-img"
+         src="data:image/svg+xml;base64,{{ svg_base64 }}"
+         alt="Chart" />
+    {% endfor %}
+    {% endif %}
+
+    {% if question.text_answer %}
+    <p class="margin-bottom-0">{{ question.text_answer }}</p>
+    {% endif %}
+
+    <p>{{ question.helptext }}</p>
+
+    <p class="empty_p">&nbsp;</p>
+{% endfor %}

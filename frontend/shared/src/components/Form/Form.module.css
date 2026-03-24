@@ -1,0 +1,114 @@
+.input-field {
+    flex: 1 0;
+}
+
+.icon-buttons {
+    margin-left: 50px;
+    flex-grow: 0;
+}
+
+.KysymysFieldContainerWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.KysymysFieldContainer.editable {
+    border: #2f487f solid 1px;
+    padding: 1rem;
+}
+
+.KysymysFieldContainer.hidden {
+    border: rgb(128, 128, 128) solid 1px;
+    padding: 1rem;
+    color: rgb(128, 128, 128);
+}
+
+.hidden-matrix-label {
+    display: block;
+    width: 100%;
+    color: #b90729;
+    font-weight: bold;
+}
+
+.KysymysContent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.KysymysHiddenIndicator {
+    margin: 0;
+    display: inline;
+    font-weight: bold;
+}
+
+.page-switch-container-upper {
+    margin: 3rem 0 0 0;
+}
+
+.page-switch-container-lower {
+    margin: 1rem 0 3rem 0;
+}
+
+.page-indicator {
+    margin-left: 1rem;
+}
+
+.pagebreak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    font-weight: bold;
+    color: #2f487f;
+}
+
+.pagebreak > hr {
+    margin: 0 1rem;
+    flex-grow: 1;
+    border-color: #2f487f;
+}
+
+.rightHr {
+    margin-right: 0 !important;
+}
+
+.pagebreak-button {
+    padding-left: 1rem !important;
+    margin: 0.5rem 0 !important;
+    align-self: end;
+}
+
+.checkbox-desc {
+    margin-left: 2rem;
+}
+
+.checkbox-label {
+    margin-right: 0;
+}
+
+.EmailField {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.option-label-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.instant-followup {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.instant-followup .input-field div div input[type='text'] {
+    height: 0.625rem;
+}
+
+.instant-followup .input-field label {
+    display: none;
+}

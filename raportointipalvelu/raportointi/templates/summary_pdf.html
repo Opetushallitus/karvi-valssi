@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <div class="logo-div">
+        <img src="{{ logo_src }}" alt="logo">
+    </div>
+
+    <h1>{{ title }}</h1>
+
+    {% if indicator_texts %}
+        <p class="indicator-title">{{ indicator_title }}</p>
+
+        {% for indicator_text in indicator_texts %}
+        <p class="indicator-text">{{ indicator_text }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <h1>{{ koulutustoimija }}</h1>
+
+    {% if group_info is not None %}
+        <h1 class="group_info">{{ group_info }}</h1>
+    {% endif %}
+
+    <p class="bold">{{ title_kuvaus }}</p>
+    <div class="multiline-box">
+        {% for line in content_kuvaus %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+
+    <p class="bold">{{ title_aineisto }}</p>
+    <div class="multiline-box">
+        {% for line in content_aineisto %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+
+    <p class="bold">{{ title_vahvuudet }}</p>
+    <div class="multiline-box">
+        {% for line in content_vahvuudet %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+
+    <p class="bold">{{ title_kohteet }}</p>
+    <div class="multiline-box">
+        {% for line in content_kohteet %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+
+    <p class="bold">{{ title_keh_toimenpiteet }}</p>
+    <div class="multiline-box">
+        {% for line in content_keh_toimenpiteet %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+
+    <p class="bold">{{ title_seur_toimenpiteet }}</p>
+    <div class="multiline-box">
+        {% for line in content_seur_toimenpiteet %}
+        <p>{{ line }}&nbsp;</p>
+        {% endfor %}
+    </div>
+</html>

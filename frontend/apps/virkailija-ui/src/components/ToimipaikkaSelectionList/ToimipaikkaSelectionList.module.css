@@ -1,0 +1,117 @@
+.multiselect-list,
+.multiselect-list-right {
+    border: solid 1px #2f487f;
+    height: 430px;
+    width: 300px;
+    overflow: auto;
+}
+
+.multiselect-button {
+    padding-bottom: 1rem;
+}
+
+button.multiselect-selectall-btn {
+    margin: 0;
+    width: 100%;
+}
+
+.multiselect-search {
+    padding-bottom: 1rem;
+}
+
+.multiselect-listitem,
+.multiselect-listitem-checked {
+    height: 50px;
+    cursor: pointer;
+}
+
+.multiselect-listitem:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.multiselect-listitem-selected {
+    background-color: #eaf1f6;
+}
+
+.multiselect-listitem-selected:hover {
+    background-color: #afc7dd;
+}
+
+.multiselect-listitem-icon {
+    justify-content: flex-end;
+}
+
+.multiselect-listitem-checkbox {
+    visibility: hidden;
+}
+
+.selection-arrow-button {
+    margin: 0.5rem 0 !important;
+}
+
+.activated-list {
+    background-color: #ededed;
+    height: 430px;
+    width: 300px;
+    overflow: auto;
+}
+
+.activated-listitem {
+    /* to compensate checkbox height on multiselect */
+    background-color: #ededed;
+    height: 50px;
+    color: #6e6e6e;
+}
+
+.group-accordion {
+    position: static;
+}
+.group-accordion-activated {
+    position: static;
+    background-color: #ededed;
+    color: #6e6e6e;
+}
+
+.group-heading {
+    padding: 0.25rem 1rem !important;
+    min-height: 0 !important;
+    height: 50px;
+    flex-flow: row-reverse;
+}
+
+.group-heading > *:first-child {
+    margin: 0 0 0 1rem;
+    align-items: center;
+}
+
+.groupCheckbox {
+    margin-left: auto;
+}
+
+.legendContainer {
+    display: flex;
+    align-items: center;
+}
+.legendContainer:first-child > span {
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    padding: 0;
+}
+
+.nameSetting {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.nameSettingFields > label {
+    margin: 0.5rem 0 0.2rem 0 !important;
+}
+.nameSettingFields > div > div > div > input {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+.nameSettingButtons {
+    display: inherit;
+    flex-direction: column-reverse;
+    margin-left: auto;
+}

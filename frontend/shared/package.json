@@ -1,0 +1,56 @@
+{
+  "name": "@cscfi/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "peerDependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "dependencies": {
+    "@mui/icons-material": "7.3.9",
+    "@mui/material": "7.3.9",
+    "@mui/utils": "7.3.3",
+    "@mui/x-date-pickers": "8.12.0",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/lodash": "4.17.20",
+    "@types/node": "25.4.0",
+    "@types/react": "19.2.2",
+    "@vitejs/plugin-react": "5.1.4",
+    "date-fns": "4.1.0",
+    "i18next": "25.8.17",
+    "i18next-browser-languagedetector": "8.2.1",
+    "i18next-multiload-backend-adapter": "2.3.0",
+    "js-cookie": "3.0.5",
+    "lodash": "4.17.23",
+    "observable-hooks": "4.2.4",
+    "react-hook-form": "7.71.2",
+    "react-i18next": "16.5.7",
+    "react-markdown": "10.1.0",
+    "react-spinners": "0.17.0",
+    "remark-gfm": "4.0.1",
+    "rxjs": "7.8.2",
+    "vite": "7.3.1",
+    "vite-tsconfig-paths": "6.1.1",
+    "vitest": "3.2.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/lodash": "4.17.20",
+    "@types/node": "25.4.0",
+    "@types/react": "19.2.2",
+    "@vitejs/plugin-react": "5.1.4",
+    "jsdom": "27.0.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "vite-tsconfig-paths": "6.1.1",
+    "vitest": "3.2.4"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "vitest"
+  }
+}

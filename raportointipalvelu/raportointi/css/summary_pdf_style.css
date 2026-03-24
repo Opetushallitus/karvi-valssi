@@ -1,0 +1,54 @@
+@page {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+html {
+    font-family: 'Lato';
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.group_info {
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.multiline-box {
+    border: 0;
+    padding: 0;
+    min-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.multiline-box p {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.logo-div {
+    margin: 0 auto 0 auto;
+    width: 400px; /* Logo width */
+}
+
+.logo-div img {
+    width: inherit;
+}
+
+.indicator-title { margin-bottom: 10px !important; }
+
+.indicator-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,159 @@
+h1.datacollection-heading {
+    margin-bottom: 2rem;
+}
+
+h2.kyselyt-heading {
+    overflow-anchor: none;
+    font-weight: normal;
+    margin-bottom: 3rem;
+}
+.kyselyt-wrapper {
+    overflow-anchor: none;
+    border: 1px solid #4188b9;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.kyselyt-wrapper > h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #2f487f;
+    margin-bottom: 1.1rem;
+}
+
+h4.stat-table-heading {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.tables-wrapper {
+    display: flex;
+}
+.tables-wrapper table {
+    border-collapse: collapse;
+}
+.tables-wrapper th,
+.tables-wrapper td {
+    vertical-align: top;
+    font-size: inherit;
+}
+.tables-wrapper {
+    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: left;
+}
+.tables-wrapper td {
+    font-weight: normal;
+    padding-left: 1rem;
+}
+.left-table-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+.left-table-wrapper :last-child {
+    margin-right: 0;
+}
+.right-table-wrapper {
+    text-align: right;
+    display: flex;
+    min-width: max-content;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 1rem;
+    border-left: #2f487f 2px solid;
+    margin-left: 2rem;
+}
+.left-table {
+    width: auto;
+    margin: 0 2rem 1rem 0;
+}
+.left-table tbody tr th {
+    text-align: left;
+}
+.left-table tbody tr td,
+.left-table thead tr td {
+    padding: 0.2rem 0;
+}
+.right-table th {
+    padding-left: 3rem;
+    font-weight: normal;
+    text-align: left;
+}
+.right-table td {
+    padding-right: 0;
+    text-align: right;
+    width: fit-content;
+}
+.close-button-content {
+    display: flex;
+    align-items: center;
+}
+.close-button-content > svg {
+    padding: 0.2rem;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.open-answered-less-than50-wrapper {
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+}
+.answered-less-than50-wrapper {
+    border-top: #2f487f 1px solid;
+    padding: 1rem 0 0 0;
+    margin-top: 1rem;
+}
+
+.list-heading {
+    margin: 0.2rem 0 1rem 0;
+}
+
+.toimipaikat-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width: 1000px) {
+    .tables-wrapper {
+        display: block;
+        flex-direction: column-reverse;
+    }
+    .left-table {
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+    .right-table-wrapper {
+        border-left: 0;
+        margin-left: 0;
+    }
+    .right-table {
+        justify-content: right;
+    }
+    .right-table th {
+        padding-left: 0;
+    }
+    h4.stat-table-heading:not(:first-child) {
+        border-top: 2px solid #2f487f;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.tiedonkeruu-page-wrapper {
+    padding: 2rem 0;
+}
+
+.tiedonkeruu-options-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.tiedonkeruu-options-wrapper > div {
+    padding-right: 2rem;
+}

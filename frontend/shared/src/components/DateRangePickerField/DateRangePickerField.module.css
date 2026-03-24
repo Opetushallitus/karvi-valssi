@@ -1,0 +1,8 @@
+.date-range-box {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.date-range-item {
+}

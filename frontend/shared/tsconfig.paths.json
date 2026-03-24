@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@cscfi/shared/*": ["../../shared/src/*"]
+    }
+  }
+}

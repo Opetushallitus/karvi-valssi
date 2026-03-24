@@ -1,0 +1,541 @@
+{:kieli {:sv "svenska", :fi "finska", :en "engelska"}
+ :etusivu {:logo-url "img/ARVO_vaaka_sv.png"
+           :otsikko "Välkommen till Arvo - informationstjänst för effektivitetshantering i utbildningsförvaltning!"
+           :alaotsikko "Arvo svarar på utbildningsadministrationens behov av att samla in feedback och uppföljningsdata inom studieverksamheten. I Arvo's administrativt advändargränssnitt kan du förändra enkäter och titta på rapporter. Användning förutsetter sin egen rättighet."
+           :tiedotteet "Meddelanden"
+           :nayta-vanhemmat "Visa äldre"
+           :luo-uusi-tiedote "Tillägg ett nytt meddelande"
+           :linkit {:kayttoohjeet {:teksti "Bekanta dig med bruksanvisningar" :siirry "Gå till instruktioner" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=99549905"}
+                    :tietosuoja {:teksti "Läs om behandling av personuppgifter (på finska)" :siirry "Gå till Arvo wiki" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=72518054"}
+                    :palaute {:teksti "Ge feedback" :siirry "Gå till enkät" :url "https://arvovastaus.csc.fi/v/WPCXAW"}
+                    :kayttooikeudet {:teksti "Ansök eller fortsätt användarrettighet" :siirry "Gå till instruktioner" :url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=49851996"}}}
+
+ :vastaajatunnus {:taustatiedot {:tutkintonimike "Examensbenämning"
+                                 :osaamisala "Kompetensområde"
+                                 :kieli "Examensspråk"
+                                 :oppilaitos "Läroanstalt"
+                                 :toimipiste "Verksamhetsställe"
+                                 :hankintakoulutuksen_toteuttaja "Anordnaren av anskaffad utbildning"
+                                 :oppisopimuksen_perusta "Vad grundar läroavtalet på"
+                                 :tehtava_yrityksessa "Arbetsuppgift i företaget"
+                                 :tyonantaja "Arbetsgivare"
+                                 :sopimustyyppi "Sätt att förvärva kunnande"
+                                 :tutkinnon_taso "Examensnivå"
+                                 :koulutusmuoto "Utbildningsform"
+                                 :rahoitusryhma "Finansiering grupp"
+                                 :kyselykerta "Frågeformulärsomgång"}
+                  :tila {:lahetetty "Skickad"
+                         :lahetys_epaonnistunut "Sändningen misslyckades"
+                         :odottaa_niputusta "Väntar på buntning"
+                         :niputettu "Buntad"
+                         :odottaa_lahetysta "Väntar på att skickas"
+                         :ei_niputeta "Inte buntas"
+                         :ei_laheteta "Ei lähetetä"
+                         :success "Skickad"}}
+
+ :raportit {:otsikko "Rapporter"
+            :alaotsikko "Arvos rapporter används för att observera svarsdata, särskilt under datainsamlingsperiod. \n\n I Arvo rapporteras svaren på den enkätrapporten som öppnas i webbläsaren endast om det finns minst fem respondenter i målgruppen. Undantag är arbetslivsudersökningarna för yrkesutbildning, som kan ses även när det är färre än fem respondenter. Alla svar skrivs ut till den primär användarens CSV-rapporten, även om det finns färre än fem respondenter i målgruppen. \n\n Landsomfattande jämförelsedatan i examensspecifika rapporterna är medelvärdet av alla examina inom studieområdet och i områdesspecifika rapporterna medelvärdet av alla examina inom utbildningsområde. Jämförelsedatan för de andra frågorna är medelvärdet av alla svar för den samma frågan. Jämförelsedatan inkluderas inte i rapporter om endast respondenter utan examensdata väljs.\n\n [Arvos bruksanvisningar (på finska)](https://wiki.eduuni.fi/pages/viewpage.action?pageId=14123634) \n\n [Vipunen - utbildningsförvaltningens statistiktjänst](https://vipunen.fi/sv-fi/)"
+            :valittu-kysely "Valt visa"
+            :valitse-kysely "Välj frågeformulär"
+            :hae-kyselyita "Sök frågeformulär"
+            :data-lataus {:vastausdata "Rapport enligt respondent"
+                          :data-vastauksittain "Rapport enligt respons"
+                          :kohteet "Alla svarskoder"
+                          :vastanneet "Respondenter"
+                          :lataa "Ladda ner CSV-fil"
+                          :valitse "Välj CSV-fil"}
+            :muoto {:graafit-ja-tekstit "Grafik och text"
+                    :vain-tekstit "Bara text"
+                    :vain-graafit "Barak grafik"}
+            :lataus "Laddar"
+            :lataus_virhe "Ett fel uppstod under laddningen"
+            :lataus_ei_tuloksia "Inget resultat"
+            :raportin-vertailukausi "Landsomfattande jämförelsedata från period"
+            :raportin-aikajakso "Tidperiod"
+            :valitse-suodattimet "Välj filter"
+            :suodattimet {:tutkinnot_ja_alat "Examin, studieområde och utbildningsområde"
+                          :hae-koulutusalaa "Sök efter utbildningsområde"
+                          :hae-tutkintoa "Sök efter examina"
+                          :ei-valintaa "Inget val"}
+            :error {:title "Rapporten kan itse visas"
+                    :ei-riittavasti-vastaajia "Det finns för få resultat med filtren som du har valt."
+                    :yrita-uudelleen "Vänligen ändra filter och försök igen."}
+            :vertailukausi {:kuluva-rahoituskausi "Nuvarande datainsamlingsperiod"
+                            :edellinen-rahoituskausi "Sista datainsamlingsperiod"
+                            :edellinen-kalenterivuosi "Sista kalenderåret"
+                            :edellinen-kevat "Sista vårtermin"
+                            :edellinen-syksy "Sista hösttermin"
+                            :ei-vertailudataa "Inga komparation data"}
+            :raportin-muoto {:otsikko "Mitä raportilla näytetään?"
+                             :kansalliset "Näytetään vain valtakunnalliset kysymykset"
+                             :rahoitusmalli "Näytetään vain rahoitusmalliin perustuvat kysymykset"
+                             :organisaatio "Näytetään vain organisaation omat lisäkysymykset"
+                             :raportin_muoto_teksti "Näytetään vain tekstivastaukset (vain pääkäyttäjille)"}
+            :muodosta-raportti "Skapa rapport"
+            :raportti {:otsikko "Rapport"
+                       :raportin-kieli "Rapportens språk"
+                       :siirry-kysymysryhmaan "Gå till frågegrupp"
+                       :nayta-raportissa "Visa på rapporten"
+                       :raportin_luontipaiva "Dag då rapporten skapades"
+                       :koulutuksen_jarjestaja "Utbildningsanordnare"
+                       :kohderyhman_koko "Målgruppens storlek"
+                       :kokonaismaara "Totalt antal svarare"
+                       :keskiarvo "Medel"
+                       :keskihajonta "Standardavvikelse"
+                       :vastpros "Svars %"
+                       :vertailudata "Jämförelsedata"
+                       :vastausprosentti "Svarsprocent"
+                       :vastaukset "Svarar"
+                       :kaytetyt-suodattimet "Utvalda filter"
+                       :muoto {:graafit-ja-tekstit "Grafik och text"
+                               :vain-graafit "Bara grafik"
+                               :vain-tekstit "Bara text"}
+                       :osallistuminen-tutkinnoittain "Deltagande efter examen"
+                       :ei_tutkintotietoa "Ingen examensinformation"
+                       :tutkinto "Examen"
+                       :vastaajien_maara "Vastaajien määrä"
+                       :kohteita "Måls"
+                       :osallistuminen-rahoitusryhmittain "Deltagande efter finansiering grupp"
+                       :ei_rahoitusryhmatietoa "Ingen finansiering grupp information"
+                       :rahoitusryhma "Finansiering grupp"
+                       :rahoitusryhma-tunnus-01 "Finansiering av läropliktsutbildning"
+                       :rahoitusryhma-tunnus-02 "Finansiering av kontinuerligt lärande"
+                       :vapaateksti-vastaus "Fritt formulerat svarar"}}
+
+ :navigaatio {:raportit "rapporter"
+              :kysymysryhmat "grupper av frågor"
+              :etusivu "förstasida"
+              :kyselypohjat "frågeformulärsmallar"
+              :kyselyt "frågeformulär"}
+
+ :roolit {:rooli {:KYSELYKERTAKAYTTAJA "Frågegruppanvändare"
+                  :VASTUUKAYTTAJA "Ansvarig användare"
+                  :OPH-KATSELIJA "OKM Katselija"
+                  :KAYTTAJA "Användare"
+                  :YLLAPITAJA "UBS Administratör"
+                  :KATSELIJA "Person med läsrättighet"}
+          :valitse_kaytettava_rooli "Välj roll som ska användas"
+          :vaihda_roolia "Ändra innevarande roll"
+          :valitse_rooli "Välj roll"}
+
+ :tiedote {:otsikko-uusi "Tillägg ett nytt meddelande"
+           :otsikko-muokkaa "Ändra meddelandet"}
+
+ :kysely {:tila {:kaikki "Alla"
+                 :avoimet "Öppna"
+                 :suljetut "Stängda"}
+          :kategoria {:kaynnissa "Aktuella"
+                      :juuri-paattyneet "Just avslutat"
+                      :arkistoitu "Arkivet"
+                      :tulevat "Kommande"}}
+ :yleiset {:kysely "Frågeformulär"
+           :nimi "Namn"
+           :kuvaus "Valfri text"
+           :suomeksi "suomeksi"
+           :ruotsiksi "På svenska"
+           :englanniksi "In English"
+           :alkupvm "Startdatum"
+           :loppupvm "Slutdatum"
+           :ladataan "Hämtar"
+           :tallenna "Spara"
+           :peruuta "Ångra"
+           :virhe_kayttoikeudet_eivat_riita "Användarrättigheterna räcker inte till"
+           :viikon-paivat-lyhyt ["Må" "Ti" "On" "To" "Fr" "Lö" "Sö"]
+           :kuukaudet ["Januari" "Februari" "Mars" "April" "Maj" "Juni" "Juli" "Augusti" "September" "Oktober" "November" "December"]
+           :takaisin "Tillbaka"}
+
+ :footer {:kayttoohjeet "Bruksanvisningar"
+          :kayttoohjeet-url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=272196505"
+          :saavutettavuusseloste "Tillgänglighetsutlåtande"
+          :saavutettavuusseloste-url "https://wiki.eduuni.fi/pages/viewpage.action?pageId=303291918"}
+ :kysymys {:kylla_ei_valinta {:eos "Jag kan inte svara"
+                              :ei "Nej"
+                              :kylla "Ja"}}
+ :csv {:vastaajatunnus "Svarskod"
+       :vastausaika "Svarstid"
+       :tunnus "Svarskod"
+       :luotuaika "Skapat"
+       :url "Svararkod"
+       :kysymysryhma "Frågegrupp"
+       :kysymys "Fråga"
+       :vastaus "Svar"
+       :voimassa_alkupvm "Första svarsdag"
+       :voimassa_loppupvm "Sista svarsdag"
+       :tutkintotunnus "Examen"
+       :vastausten_lkm "Respondents antal" :vastaajien_lkm "Respondents antal" :kohteiden_lkm "Svarsantal"
+       :tutkinto_selite "Namn på examen"
+       :tutkinnon_osa_selite "Namn på examensdel"
+       :rahoitusryhma_selite "Namn på finansiering grupp"
+       :hankintakoulutuksen_toteuttaja_selite "Namn på anordnaren av anskaffad utbildning"
+       :toimipiste_selite "Namn på verksamhetsställe"
+       :koulutustoimija_selite "Namn på utbildningsaktör"
+       :koulutusalakoodi_selite "Utbildningsområde"
+       :asuinkunta_koodi_selite "Bostadskommun"
+       :opiskelupaikkakunta_koodi_selite "Field of education"
+       :oppilaitos_nimi "Läroanstalt"
+       :koulutusmuoto "Utbildningsform"
+       :nimi "Frågeformulärsomgång"
+       :nippu "Bunt-id"
+       :tila "Status"
+       :odottaa_niputusta "Väntar på buntning "
+       :niputettu "Buntad"
+       :ei_niputeta "Inte buntas"
+       :osaamisala "Kompetensområde"
+       :tutkintonimikkeet "Examensbenämning"
+       :tutkinnot "Examina"
+       :tutkinnon_osat "Examensdelar"
+       :tyopaikkajaksojen_kesto "Längden på arbetsplatsperioder (dagar totalt)"
+       :tyopaikkajaksojen_lkm "Työpaikkajaksoja"
+       :tyopaikkakysely_tunnus "Arbetsplatsenkätens svararkod"}}
+
+ ;
+ ;:kyselypohja {:tallennus_onnistui "Frågeformulärsmallen har sparats",
+ ;              :kyselypohja "Frågeformulärsmall",
+ ;              :valinta_ohjeistus "Välj frågeformulärsmall som ska läggas till",
+ ;              :kuvaus "Beskrivning av frågeformulärsmallen",
+ ;              :luo_uusi "Skapa en ny frågeformulärsmall",
+ ;              :julkaisu_epaonnistui "Frågeformulärsmallen kunde inte publiceras",
+ ;              :palautus_julkaistuksi_epaonnistui "Frågeformulärsmallen kunde inte återställas som publicerad",
+ ;              :poista_teksti "Frågeformulärsmallen tas bort permanent och kan inte återställas.",
+ ;              :sulkeminen_epaonnistui "Frågeformulärsmallen kunde inte stängas",
+ ;              :julkaise_teksti "Efter publiceringen kan frågeformulärsmallen användas för frågeformulär.",
+ ;              :tallennus_epaonnistui "Frågeformulärsmallen kunde inte sparas",
+ ;              :palauta_julkaistuksi "Återställ frågeformulärsmallen som publicerad",
+ ;              :palautus_luonnokseksi_onnistui "Frågeformulärsmallen har återställts som utkast",
+ ;              :etsi "Sök frågeformulärsmallar",
+ ;              :poistaminen_onnistui "Frågeformulärsmallen har tagits bort",
+ ;              :poistaminen_epaonnistui "Frågeformulärsmallen kunde inte tas bort",
+ ;              :palauta_luonnokseksi_teksti "Som utkast kan mallen inte användas för frågeformulär",
+ ;              :nimi "Frågeformulärsmallens namn",
+ ;              :rakenne "Strukturen av frågeformulärsmallen",
+ ;              :valinta "Val av frågeformulärsmall",
+ ;              :julkaise "Publicera frågeformulärsmall",
+ ;              :breadcrumb_kyselypohja "Frågeformulärsmallar",
+ ;              :palauta_julkaistuksi_teksti "Efter publiceringen kan frågeformulärsmallen användas för frågeformulär.",
+ ;              :sulje_teksti "En stängd frågeformulärsmall kan inte tas med i frågeformulär.",
+ ;              :breadcrumb_uusi_kyselypohja "Ny frågeformulärsmall",
+ ;              :sulje "Stäng frågeformulärsmallen",
+ ;              :suljettu "Frågeformulärsmallen är stängd",
+ ;              :palauta_luonnokseksi "Återställ frågeformulärsmallen som utkast",
+ ;              :julkaistu "Frågeformulärsmallen har publicerats",
+ ;              :poista "Ta bort frågeformulärsmall",
+ ;              :muokkaa "Ändra frågeformulärsmall",
+ ;              :breadcrumb_muokkaa_kyselypohjaa "Ändra frågeformulärsmall",
+ ;              :palautus_julkaistuksi_onnistui "Frågeformulärsmallen har återställts som publicerad",
+ ;              :palautus_luonnokseksi_epaonnistui "Frågeformulärsmallen kunde inte återställas som utkast"},
+ ;:vastaajatunnus {:tila {:lahetetty "Skickad",
+ ;                        :lahetys_epaonnistunut "Kunde inte skickas",
+ ;                        :odottaa_niputusta "Väntar på buntning",
+ ;                        :niputettu "Buntad",
+ ;                        :odottaa_lahetysta "Väntar på att skickas",
+ ;                        :ei_niputeta "Inte buntas",
+ ;                        :ei_laheteta "Ei lähetetä",
+ ;                        :success "Skickad"}
+ ;                 :taustatiedot {:kieli "Examensspråk"
+ ;                                :tutkinto "Examen"
+ ;                                :tutkintonimike "Examensbenämning"
+ ;                                :osaamisala "Kompetensområde"
+ ;                                :oppilaitos "Läroanstalt"
+ ;                                :toimipiste "Verksamhetsställe"
+ ;                                :hankintakoulutuksen_toteuttaja "Anordnaren av anskaffad utbildning"}
+ ;                 :lataa_csv "Exportera svararkoder"
+ ;
+ ;                 :tutkintomuoto "Tutkintomuoto",
+ ;                 :tyopaikka "Arbetsplats",
+ ;                 :nippulinkki "Buntlänk",
+ ;                 :tutkintomuoto_tutkinnon_osa "Tutkinnon osa",
+ ;                 :vastaajia "Antal personer som svarat",
+ ;                 :luonti_laajennettu_tooltip "Tunnusten luominen, kun tunnus kuuluu laajennettuun oppisopimuskoulutuksen järjestämistehtävään",
+ ;                 :vastaa "Länk till Responsblankett",
+ ;                 :tallennus_onnistui "Svararkoderna har sparats",
+ ;                 :siirtymaaika_loppuu "Övergångstid slutar",
+ ;                 :menneisyydessa_selite "Svararkoder kan inte skapas i förfluten tid",
+ ;                 :lista "Svararkoder i frågeformulärsomgången",
+ ;                 :ei_tutkintoja "(Inga valbara examina)",
+ ;                 :uusi_vastaajatunnus "Att skapa svararkoder",
+ ;                 :laheta "Skicka svararkod",
+ ;                 :koulutuksen_jarjestava_oppilaitos "Läroanstalt som ordnar utbildningen",
+ ;                 :nayta_omat "Visa mina svararkoder",
+ ;                 :poista_otsikko "Ta bort svararkod",
+ ;                 :poista_teksti "Svararkoden raderas för gott och kan inte returneras. Ifall koden distribuerats, upphör länkarna att fungera.",
+ ;                 :tallennus_epaonnistui "Svararkoderna kunde inte sparas",
+ ;                 :tunnus "Svararkod",
+ ;                 :lisaa_vastaajatunnukset "Lägg till svararkoder",
+ ;                 :luotuaika "Luotu",
+ ;                 :henkilokohtainen "Personlig",
+ ;                 :vastausaika "Svarstid",
+ ;                 :nayta_lisaa_tutkintoja "Visa mera examina",
+ ;                 :koulutusmuoto_monimuoto "Flerformsstudier",
+ ;                 :luonti "Skapa svararkoder",
+ ;                 :sopimus "Avtal",
+ ;                 :valitse_koulutuksen_toteuttaja "Valitse ensin koulutuksen toteuttaja",
+ ;                 :koulutuksen_jarjestaja "Utbildningsanordnare",
+ ;                 :hankintakoulutuksen_toteuttaja "Anordnaren av anskaffad utbildning",
+ ;                 :tutkinto "Examen",
+ ;                 :koulutuksen_jarjestava_toimipiste "Verksamhetsställe",
+ ;                 :koulutusmuoto "Studieform",
+ ;                 :vastauksia "Svar",
+ ;                 :tutkintomuoto_koko_tutkinto "Koko tutkinto",
+ ;                 :vastausprosentti "Svarsprocent",
+ ;                 :jarjestaja "Arrangör",
+ ;                 :koulutusmuoto_paivaopiskelu "Dagstudier",
+ ;                 :luonti_laajennettu "Luo tunnuksia (laajennettu)",
+ ;                 :tutkinnon_osa "Examensdel"},
+ ;
+ ;:tiedote {:muokkaa "Ändra meddelande", :tallennus_onnistui "Meddelandet har sparats", :tiedote "Meddelande"},
+ ;:haluatko-poistua "Är du säker på att du vill lämna sidan? Ändringar som du gjort och inte sparat går förlorade!",
+ ;:kysymys {:naytettava_asteikko "Skala som visas",
+ ;          :vastausvaihtoehdot "Svarsalternativ",
+ ;          :eos_vastaus_sallittu "Svaret \"Kan inte säga\" är tillåtet",
+ ;          :arvosana6_valinnat "1 - 2 - 3 - 4 - 5 - 6",
+ ;          :vastaus_pakollinen "Svaret är obligatoriskt",
+ ;          :lisaa_vaihtoehto "Lägg till alternativ",
+ ;          :vapaateksti {:rajoite {:ei_rajoitetta "Kaikki", :numero "Numerot", :otsikko "Vastauksessa sallitut merkit"}},
+ ;          :nps_valinnat "0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10",
+ ;          :valintojen_maksimimaara "Maximalt antal alternativ",
+ ;          :poistettava "Frågan kan tas bort från frågeformuläret",
+ ;          :jatkokysymys "Fortsättningsfråga",
+ ;          :vastaustapa "Svarssätt",
+ ;          :arvosana4_ja_eos {:4 "4", :1 "Jag kan inte svara", :2 "2", :5 "5", :3 "3"},
+ ;          :kylla_ei_valinta {:eos "Jag kan inte svara / vet inte", :ei "Nej", :kylla "Ja"},
+ ;          :likert_asteikko_valinnat "Helt av annan åsikt - Någorlunda av annan åsikt - Inte av samma och inte av annan åsikt - Någorlunda av samma åsikt - Helt av samma åsikt",
+ ;          :asteikko_valinnat "Nej / inte alls - Litet - I någon mån - Ganska mycket - Väldigt mycket",
+ ;          :jatkokysymys_ei_vastaukselle "Fortsättningsfråga på ett Nej-svar",
+ ;          :vastauksen_maksimipituus "Svarets maximilängd",
+ ;          :eos_tekstit "Lisää näytettävä teksti",
+ ;          :arvosana6_ja_eos {:3 "3",
+ ;                             :0 "0",
+ ;                             :1 "1",
+ ;                             :6 "Jag kan inte svara / vet inte",
+ ;                             :5 "5",
+ ;                             :2 "2",
+ ;                             :4 "4",
+ ;                             :eos "Jag kan inte svara / vet inte"},
+ ;          :vapaa_tekstikentta "Textfält för fritt formulerat svar",
+ ;          :arvosana6_ja_eos_valinnat "0 - 1 - 2 - 3 - 4 - 5 - Jag kan inte svara / vet inte",
+ ;          :nps {:10 "10", :0 "0", :4 "4", :7 "7", :1 "1", :8 "8", :9 "9", :2 "2", :5 "5", :3 "3", :6 "6"},
+ ;          :likert_asteikko {:3 "Inte av samma och inte av annan åsikt",
+ ;                            :1 "Helt av annan åsikt",
+ ;                            :5 "Helt av samma åsikt",
+ ;                            :eos "Jag kan inte svara / vet inte",
+ ;                            :2 "Någorlunda av annan åsikt",
+ ;                            :4 "Någorlunda av samma åsikt"},
+ ;          :arvosana4_ja_eos_valinnat "5 - 4 - 3 - 2 - Jag kan inte svara / vet inte",
+ ;          :arvosana6 {:6 "6", :1 "1", :3 "3", :5 "5", :4 "4", :2 "2"},
+ ;          :asteikko5_1 {:2 "2", :eos "Jag kan inte svara / vet inte", :4 "4", :3 "3", :5 "5", :1 "1"},
+ ;          :arvosana {:2 "2", :4 "4", :1 "1", :3 "3", :eos "Jag kan inte svara / vet inte", :5 "5"},
+ ;          :tyyppi {:vapaateksti "Fritt formulerat svar",
+ ;                   :arvosana4_ja_eos "Grade (5-2 + Jag kan inte svara / vet inte)",
+ ;                   :kylla_ei_valinta "Ja/Nej alternativ",
+ ;                   :asteikko "Skala",
+ ;                   :arvosana6_ja_eos "Grade (1-6 + Jag kan inte svara / vet inte)",
+ ;                   :luku "Luku",
+ ;                   :valiotsikko "Väliotsikko",
+ ;                   :nps "Net Promoter Score",
+ ;                   :likert_asteikko "Likertskala",
+ ;                   :arvosana6 "Vitsord (1-6)",
+ ;                   :asteikko5_1 "Skala (5-1)",
+ ;                   :arvosana "Vitsord",
+ ;                   :alasvetovalikko "Rullgardinsmenyn",
+ ;                   :monivalinta "Flerval",
+ ;                   :arvosana7 "Vitsord (1-7)"},
+ ;          :selitteet "Lägg till beskrivning",
+ ;          :arvosana_valinnat "1 - 2 - 3 - 4 - 5",
+ ;          :jatkokysymys_kylla_vastaukselle "Fortsättningsfråga på ett Ja-svar",
+ ;          :asteikko5_1_valinnat "5 - 4 - 3 - 2 - 1",
+ ;          :arvosana7_valinnat "1 - 2 - 3 - 4 - 5 - 6 - 7",
+ ;          :monivalinta {:eos "Jag kan inte svara / vet inte"},
+ ;          :arvosana7 {:6 "6", :1 "1", :7 "7", :4 "4", :2 "2", :5 "5", :3 "3"}},
+ ;:muokkaa_ohjetta "Ändra anvisningar",
+ ;
+ ;:impersonointi {:lopeta_avustus "Avsluta assistans",
+ ;                :valitse_kayttaja "Välj användare",
+ ;                :vaihda_avustettavaksi_kayttajaksi "Ändra till assisterad användare",
+ ;                :valitse_avustettava_kayttaja "Välj assisterad användare"},
+ ;:peruuta_muokkaus "Ångra ändring",
+ ;:kyselykerta {:samanniminen_kyselykerta "En frågeformulärsomgång med samma namn existerar redan",
+ ;              :lukitse_teksti "En låst frågeformulärsomgång kan inte besvaras.",
+ ;              :tallennus_onnistui "Frågeformulärsomgången har sparats",
+ ;              :perustiedot "Basuppgifter",
+ ;              :kayttamattomia_vastaajatunnuksia "Käyttämättömiä vastaajatunnuksia (sv)",
+ ;              :tallennus_epaonnistui "Frågeformulärsomgången kunde inte sparas",
+ ;              :poistaminen_onnistui "Frågeformulärsomgång har tagits bort",
+ ;              :kyselykerran_nimi "Namn på frågeformulärsomgång",
+ ;              :poistaminen_epaonnistui "Frågeformulärsomgång kunde inte tas bort",
+ ;              :vastausaika "Svarstid",
+ ;              :muokkaa_vastaajatunnuste_maaraa "Ändra det totala antalet av svarar koderna",
+ ;              :poista "Ta bort frågeformulärsomgång",
+ ;              :nayta "Visa frågeformulärsomgång",
+ ;              :uusi_kyselykerta "Ny frågeformulärsomgång",
+ ;              :poista_ohjeistus "Frågeformulärsomgång tas bort permanent och det är inte möjligt att få tillbaka",
+ ;              :lukitseminen_onnistui "Frågeformulärsomgången är låst",
+ ;              :lukitse "Lås frågeformulärsomgång"},
+ ;
+ ;:ohjeteksti "Anvisningar",
+ ;:kysymysryhma {:luo_uusi_kysymys "Skapa en ny fråga",
+ ;               :nayta_rakenne "Visa struktur",
+ ;               :tallennus_onnistui "Gruppen av frågor har sparats",
+ ;               :valinta_ohjeistus "Välj grupp av frågor som ska läggas till",
+ ;               :luonti_epaonnistui "Gruppen av frågor kunde inte skapas",
+ ;               :lisaa_kysymys "Lägg till fråga",
+ ;               :kuvaus "Valfri text",
+ ;               :luo_uusi "Skapa en ny grupp av frågor",
+ ;               :sulkeminen_onnistui "Gruppen av frågor är stängd",
+ ;               :julkaisu_epaonnistui "Gruppen av frågor kunde inte publiceras",
+ ;               :palautus_julkaistuksi_epaonnistui "Gruppen av frågor kunde inte återställas som publicerad",
+ ;               :selite "Beskrivning",
+ ;               :poista_teksti "Gruppen av frågor tas bort permanent och kan inte återställas.",
+ ;               :sulkeminen_epaonnistui "Gruppen av frågor kunde inte stängas",
+ ;               :tallennus_epaonnistui "Gruppen av frågor kunde inte sparas",
+ ;               :palauta_julkaistuksi "Återställ gruppen av frågor som publicerad",
+ ;               :palautus_luonnokseksi_onnistui "Gruppen av frågor har återställts som utkast",
+ ;               :etsi "Sök grupp av frågor",
+ ;               :luonti_onnistui "En ny grupp av frågor skapades",
+ ;               :kysymysryhmat "Grupper av frågor",
+ ;               :poistaminen_onnistui "Gruppen av frågor har tagits bort",
+ ;               :poistaminen_epaonnistui "Gruppen av frågor kunde inte tas bort",
+ ;               :palauta_luonnokseksi_teksti "En grupp av frågor som är ett utkast kan ändras, men kan inte tas med i frågeformulär.",
+ ;               :kysymykset "Frågor",
+ ;               :nimi "Namn",
+ ;               :rakenne "Strukturen hos gruppen av frågor",
+ ;               :valinta "Val av grupp av frågor",
+ ;               :julkaise "Publicera grupp av frågor",
+ ;               :uusi "Ny grupp av frågor",
+ ;               :valtakunnalliset "Nationella",
+ ;               :palauta_julkaistuksi_teksti "En publicerad grupp av frågor kan tas med i frågeformulär.",
+ ;               :sulje_teksti "En stängd grupp av frågor kan inte läggas till ett frågeformulär eller en frågeformulärsmall",
+ ;               :muokkaa "Ändra grupp av frågor",
+ ;               :taustakysymykset "Bakgrundsfrågor",
+ ;               :sulje "Stäng grupp av frågor",
+ ;               :julkaisu_onnistui "Gruppen av frågor har publicerats",
+ ;               :palauta_luonnokseksi "Återställ gruppen av frågor som utkast",
+ ;               :poista "Ta bort grupp av frågor",
+ ;               :muokkaa_kysymysta "Ändra en fråga",
+ ;               :muut "Övriga",
+ ;               :julkaise_ohjeistus "En publicerad grupp av frågor kan inte längre ändras. Efter publiceringen kan gruppen tas med i frågeformulär.",
+ ;               :asteikkojatkokysymyksen_kopiointi "Gruppen innehöll fortsättningsfrågor med svarsskalor som inte har kopierats",
+ ;               :asteikkokysymyksen_kopiointi "Gruppen innehöll frågor med svarsskalor som inte har kopierats",
+ ;               :valtakunnallinen "Nationell",
+ ;               :kopioi "Kopiera",
+ ;               :palautus_julkaistuksi_onnistui "Gruppen av frågor har återställts som publicerad",
+ ;               :palautus_luonnokseksi_epaonnistui "Gruppen av frågor kunde inte återställas som utkast"},
+ ;:kysely {:taustakysymysryhma_puuttuu "Om det finns nationella grupper av frågor i frågeformuläret ska också de nationella bakgrundsfrågorna tas med!",
+ ;         :raportti_tulosta "Skriv ut rapport",
+ ;         :sulje_ohjeistus "Man kan inte besvara frågeformulärsomgångar i ett stängt frågeformulär.",
+ ;         :suljetun_kysymysryhman_kopiointi "Frågeformuläret innehöll stängda grupper av frågor som inte har kopierats",
+ ;         :tallennus_onnistui "Frågeformuläret har sparats",
+ ;         :nakyy_vastaajalle "synligt för den som svarar",
+ ;         :breadcrumb_kyselyt "Frågeformulär",
+ ;         :kuvaus "Beskrivning av frågeformuläret",
+ ;         :sulkeminen_onnistui "Frågeformuläret är stängt",
+ ;         :julkaisu_epaonnistui "Frågeformuläret kunde inte publiceras",
+ ;         :breadcrumb_kopioi_kysely "Kopiera frågeformulär",
+ ;         :breadcrumb_uusi_kysely "Nytt frågeformulär",
+ ;         :poisto_epaonnistui "Frågeformuläret kunde inte tas bort",
+ ;         :ei_kyselyita "Inga frågeformulär",
+ ;         :tallennus_epaonnistui "Frågeformuläret kunde inte sparas",
+ ;         :uuden_luonti_epaonnistui "Ett nytt frågeformulär kunde inte skapas",
+ ;         :samanniminen_kysely "Ett frågeformulär med samma namn existerar redan",
+ ;         :etsi "Sök frågeformulär",
+ ;         :raportti_tulosta_vapaatekstivastaukset "Skriv ut fritt formulerat svar",
+ ;         :poisto_onnistui "Frågeformuläret har tagits bort",
+ ;         :nimi "Frågeformulärets namn",
+ ;         :julkaise "Publicera frågeformulär",
+ ;         :otsikko "Din organisations frågeformulär",
+ ;         :kyselykertojen_lajitteluperuste "Sorteringsgrund i frågeformulärsomgångar",
+ ;         :kyselykertojen_lajitteluperuste_luontiaika "Genereringstid",
+ ;         :esikatsele "Förhandsgranska",
+ ;         :muokkaa "Ändra frågeformulär",
+ ;         :lisaa_kysymysryhma "Lägg till en grupp av frågor",
+ ;         :pohjan_haku_epaonnistui "Sökningen av frågeformulärsmall misslyckades",
+ ;         :sulje "Stäng frågeformulär",
+ ;         :ei_kyselykertoja "Inga frågeformulärsomgångar",
+ ;         :kyselykertojen_lajitteluperuste_nimi "Namn",
+ ;         :ei_kysymysryhmia "Inga grupper av frågor",
+ ;         :julkaisu_onnistui "Frågeformuläret har publicerats",
+ ;         :poista "Ta bort frågeformulär",
+ ;         :ryhman_haku_epaonnistui "Sökningen av grupp av frågor misslyckades",
+ ;         :palautus_onnistui "Frågeformuläret har öppnats",
+ ;         :lisaa_kyselypohja "Lägg till frågeformulärsmall",
+ ;         :raportti_tulosta_graafit "Skriv även ut grafer",
+ ;         :julkaise_ohjeistus "Ett publicerat frågeformulär kan  inte längre ändras. Efter publiceringen kan man göra frågeformulärsomgångar.",
+ ;         :poista_ohjeistus "Frågeformuläret tas bort permanent och kan inte återställas.",
+ ;         :liian_monta_lisakysymysta "Frågeformuläret får innehålla högst 50 tilläggsfrågor",
+ ;         :breadcrumb_muokkaa_kyselya "Ändra frågeformulär",
+ ;         :breadcrumb_kyselykerta "Frågeformulärsomgång",
+ ;         :kopioi "Kopiera frågeformulär",
+ ;         :raportti "Visa rapport",
+ ;         :vastausaktiivisuus_lyhyt "Svart- deltagandet",
+ ;         :palauta "Återställ frågeformulär",
+ ;         :breadcrumb_uusi_kyselykerta "Ny frågeformulärsomgång"},
+ ;:yleiset {:asti "Sista svarsdag",
+ ;          :voimassa "I kraft",
+ ;          :logo_url "../../img/ARVO_vaaka_sve.png",
+ ;          :vastaajia "Antal respondenter",
+ ;          :uudelleenohjaus_selite "En länk",
+ ;          :anna_hakuehto "Ange sökvillkor",
+ ;          :nakyy_vastaajalle "synligt för den som svarar",
+ ;          :pakollisia-kenttia "(*) Obligatoriskt fält",
+ ;          :luo_uusi_kysely "Skapa ett nytt frågeformulär",
+ ;          :viimeisin_vastaus "Sista svar",
+ ;          :viimeisin_vastaus_lyhyt "Sista svar",
+ ;          :avaa "Öppna",
+ ;          :etsitaan "Söker...",
+ ;          :uudelleenohjaus "Omdirigering",
+ ;          :selite "Beskrivning",
+ ;          :osaamisala "Kompetensområde",
+ ;
+ ;          :tietolahde "Informationskälla responssystemet AIPAL",
+ ;          :tutkintotyyppi "Examenstyp",
+ ;          :eos_teksti "Teksti",
+ ;          :palvelin_virhe "Ett fel inträffade på servern. Försök på nytt om en stund.",
+ ;          :tallennus_epaonnistui "Sparandet misslyckades",
+ ;          :palauta_julkaistuksi "Återställ som publicerad",
+ ;          :lataus_epaonnistui "Hämtningen misslyckades",
+ ;          :kysymys "Fråga",
+ ;          :kirjaudu_ulos_title "Logga ut från Utbildningsstyrelsens tjänster",
+ ;          :oppilaitos "Läroanstalt",
+ ;          :ei_tuloksia "Inga resultat",
+ ;          :virhe_kayttoikeudet_eivat_riita "Användarrättigheterna räcker inte till",
+ ;          :nayttotutkintojen_palautejarjestelma "responssystemet för fristående examina",
+ ;          :nimi_otsikko "Namn",
+ ;          :tutkinnon_jarjestaja "Examensarrangör",
+ ;          :tallennataan "Sparar",
+ ;          :julkaise "Publicera",
+ ;          :uudelleenohjaus_kokeile "Testa länken",
+ ;          :pakollinen "Obligatorisk",
+ ;          :tutkinnon_suorituskieli "Examensspråk",
+ ;          :tallenna "Spara",
+ ;          :nayta_suljetut "Visa stängda",
+ ;          :lukittu "låst",
+ ;          :luonnokset "Utkast",
+ ;          :palvelun_otsikko "Arvo",
+ ;          :ruotsiksi "på svenska",
+ ;          :piilota_suljetut "Dölj stängda",
+ ;          :valiotsikko "Väliotsikko",
+ ;          :muokkaa "Ändra",
+ ;          :lisaa "Mer"
+ ;          :lataa "Ladda ner"
+ ;          :sulje "Stäng",
+ ;          :tila "Status"
+ ;          :lisaa_valittu "Lägg till det valda",
+ ;          :tutkinto "Examen",
+ ;          :englanniksi "in English",
+ ;          :haluatko_kirjautua_ulos "Är du säker på att du vill logga ut från alla Utbildningsstyrelsens tjänster? Om du vill fortsätta använda andra tjänster, klicka på Ångra och stäng browserns mellanblad.",
+ ;          :koulutusmuoto "Utbildningsform",
+ ;          :alkaen "Från och med",
+ ;          :palauta_luonnokseksi "Återställ som utkast",
+ ;          :poista "Ta bort",
+ ;          :vastaajatunnukset "Svararkoder",
+ ;          :kyselykerta "Frågeformulärsomgång",
+ ;          :istunto_vanhentunut {:ohje "Var god och logga in på nytt.", :otsikko "Sessionen har gått ut"},
+ ;          :julkaistut_valtakunnalliset "Publicerad nationella",
+ ;          :valtakunnallinen "Nationell",
+ ;          :tyyppi "Typ",
+ ;          :yrita_uudelleen "Försök igen",
+ ;          :julkaistut "Publicerade",
+ ;          :lukitse "Lås",
+ ;          :suomeksi "suomeksi",
+ ;          :palauta "Återställ"
+ ;
+ ;          :valinnainen "Valfri"}
